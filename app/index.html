@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="harley">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation project</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="MainController">
+
+    
+    <header class="row">
+      <div class="small-12 columns">
+        <h1>Harley Alexander</h1>
+        <h2>Product Designer</h2>
+      </div>
+    </header>
+    <section class="hero row">
+      <div class="small-12 columns">
+        <p>Hi, I'm Harley, and I'm a 21 year old web designer and developer. I'm based in Melbourne, Australia and I have over 5 years experience in everything you could possibly want from me: clients, web & identity design, development, and deployment. I'm also a published author.</p>
+      </div>
+    </section>
+    <section class="about row">
+      <div class="small-12 medium-6 columns overview">
+        <h3>What can I bring to your team?</h3>
+        <div class="proof-point" ng-repeat="point in points">
+          <h4>{{ point.title }}</h4>
+          <p>{{ point.desc }}</p>
+        </div>
+      </div>
+      <div class="small-12 medium-6 columns employment">
+        <h3>Past employment</h3>
+        <div class="past-employment" ng-repeat="job in employment">
+          <h4>{{ job.title }}</h4>
+          <h5>{{ job.company }}</h5>
+          <p>{{ job.when }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
