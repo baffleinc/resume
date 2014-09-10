@@ -5839,7 +5839,7 @@ nav.menu {
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transform: translate3d(0, -100%, 0);
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1); }
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
   nav.menu.open {
     transform: translate3d(0, 0, 0);
     opacity: 1; }
