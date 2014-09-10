@@ -3,6 +3,7 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "font-awesome": "~4.1.0",
-    "angular": "~1.2.23"
+    "angular": "~1.2.23",
+    "angular-scroll": "~0.6.2"
   }
 }

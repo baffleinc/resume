@@ -344,7 +344,7 @@
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
+ $button-sml: rem-calc(12);
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
 
@@ -922,11 +922,11 @@
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
-// $reveal-modal-bg: #fff;
-// $reveal-position-top: rem-calc(100);
-// $reveal-default-width: 80%;
+$reveal-modal-bg: rgba(0,0,0,0.8);
+$reveal-position-top: 0;
+$reveal-default-width: 100%;
 // $reveal-modal-padding: rem-calc(20);
-// $reveal-box-shadow: 0 0 10px rgba(#000,.4);
+$reveal-box-shadow: none;
 
 // We use these to style the reveal close button
 // $reveal-close-font-size: rem-calc(40);
@@ -936,12 +936,12 @@
 // $reveal-close-weight: $font-weight-bold;
 
 // We use this to set the default radius used throughout the core.
-// $reveal-radius: $global-radius;
+$reveal-radius: 0;
 // $reveal-round: $global-rounded;
 
 // We use these to control the modal border
 // $reveal-border-style: solid;
-// $reveal-border-width: 1px;
+$reveal-border-width: 0px;
 // $reveal-border-color: #666;
 
 // $reveal-modal-class: "reveal-modal";

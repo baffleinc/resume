@@ -19,40 +19,122 @@
   </head>
   <body ng-controller="MainController">
 
-    
-    <header class="row">
-      <div class="small-12 columns">
-        <h1>Harley Alexander</h1>
-        <h2>Product Designer</h2>
+    <nav class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
+      <div class="row">
+        <div class="small-12 columns">
+          <a ng-click="toTheTop()" class="fa fa-angle-up"></a>
+          <strong>Harley Alexander</strong>
+          <span class="right">
+            <a href="" class="fa fa-phone"></a>
+            <a href="" class="fa fa-envelope"></a>
+            <a href="" class="fa fa-linkedin"></a>
+            <a ng-click="toggleMenu()" class="fa fa-bars"></a>
+          </span>
+        </div>
       </div>
-    </header>
-    <section class="hero row">
-      <div class="small-12 columns">
-        <p>Hi, I'm Harley, and I'm a 21 year old web designer and developer. I'm based in Melbourne, Australia and I have over 5 years experience in everything you could possibly want from me: clients, web & identity design, development, and deployment. I'm also a published author.</p>
+    </nav>
+
+    <nav class="menu" ng-show="menuOpen">
+      <a ng-click="toggleMenu()" class="fa fa-times"></a>
+      <ul>
+        <li><a>Profile</a></li>
+        <li><a>A word from me</a></li>
+        <li><a>Employment History</a></li>
+        <li><a>What I can bring to your team</a></li>
+        <li><a>A shortlist of my skills</a></li>
+        <li><a>What &amp; where I've learnt</a></li>
+        <li><a>Get in touch</a></li>
+      </ul>
+    </nav>
+
+    <section class="profile">
+      <div class="contact">
+        <div class="row">
+          <div class="small-12 columns buttons">
+            <a class="small clear button radius"><i class="fa fa-phone"></i></a> <br>
+            <a class="small clear button radius"><i class="fa fa-envelope"></i></a> <br>
+            <a class="small clear button radius"><i class="fa fa-linkedin"></i></a> <br>
+          </div>
+        </div>
+    
+      </div>
+      <div class="table-cell me">
+        <div class="row">
+          <div class="small-12 columns">
+            <h1>Harley Alexander</h1>
+            <p><em>User Experience Designer<br>
+              Digital &amp; Print Designer<br>
+              Front-end Developer</em></p>
+            <p><i class="fa fa-angle-down"></i></p>
+          </div>
+        </div>
+        
       </div>
     </section>
-    <section class="about row">
-      <div class="small-12 medium-6 columns overview">
-        <h3>What can I bring to your team?</h3>
-        <div class="proof-point" ng-repeat="point in points">
-          <h4>{{ point.title }}</h4>
+
+    <section class="intro">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="text-center">Hey, I'm Harley. I'm a 21 year old digital &amp; print designer / front-end developer. I have a passion for creating digital products and excellent user experiences. Recently, I've fallen in love with mobile. I've been designing and building the web for 7 years, on an enourmous range of projects. My skillset is vast, and I am looking to focus my career down the path of product design.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="employment">
+      <h2>Employment History</h2>
+      <div ng-repeat="job in employment" class="job row {{ slug(job.company) }}">
+        <div class="small-12 columns">
+          <p class="company">{{ job.company }}</p>
+          <h3>{{ job.title }}</h3>
+          <a ng-click="showJob(job)">info</a>
+        </div>
+        
+      </div>
+
+    </section>
+
+    <section class="value">
+      <h2>What can I bring to your team?</h2>
+      <div ng-repeat="point in points" class="point row">
+        <div class="small-12 columns">
+          <h3>{{ point.title }}</h3>
           <p>{{ point.desc }}</p>
         </div>
+      
       </div>
-      <div class="small-12 medium-6 columns employment">
-        <h3>Past employment</h3>
-        <div class="past-employment" ng-repeat="job in employment">
-          <h4>{{ job.title }}</h4>
-          <h5>{{ job.company }}</h5>
-          <p>{{ job.when }}</p>
+    </section>
+
+    <section class="skills">
+      <h2>A shortlist of my skills</h2>
+      <ul>
+        <li ng-repeat="skill in skills" class="{{ slug(skill.name) }}">
+          {{ skill.name }}
+        </li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div ng-repeat="edu in education" class="edu row">
+        <div class="small-12 columns">
+          <p class="place">{{ edu.location }}</p>
+          <h3>{{ edu.name }}</h3>
+          <h4>{{ edu.subtitle }}</h4>
         </div>
       </div>
+    </section>
+
+    <section class="contact">
+      <h2>Let's catch up!</h2>
     </section>
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
