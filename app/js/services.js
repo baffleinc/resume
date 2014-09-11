@@ -120,6 +120,11 @@ angular.module('harley.services', [])
 	return {
 		education: [
 			{
+				name: "Various Short Courses",
+				location: "Online",
+				subtitle: "Codeschool, Railscasts, Egghead.io, Tuts+, etc"
+			},
+			{
 				name: "Certificate II in Design Fundamentals",
 				location: "Tafe Design Centre, Enmore"
 			},
@@ -127,11 +132,6 @@ angular.module('harley.services', [])
 				name: "Intensive Digital Art Workshop Scholarship",
 				location: "National Art School Sydney",
 				subtitle: "38/40 for final body of work"
-			},
-			{
-				name: "Various Short Courses",
-				location: "Online",
-				subtitle: "Codeschool, Railscasts, Egghead.io, Tuts+"
 			},
 			{
 				name: "Higher School Certificate",

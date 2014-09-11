@@ -2,7 +2,8 @@
 
 angular.module('harley.controllers', [])
 
-.controller('MainController', ['$scope', '$document', '$window', '$modal', 'Proof', 'Employment', 'Skills', 'Education', function($scope, $document, $window, $modal, Proof, Employment, Skills, Education){
+.controller('MainController', ['$scope', '$document', '$window', '$modal', 'Proof', 'Employment', 'Skills', 'Education', 'parallaxHelper',
+	function($scope, $document, $window, $modal, Proof, Employment, Skills, Education, parallaxHelper){
 
 	// FILL SCOPE WITH MY AWESOMENESS //
 	$scope.points = Proof.points;
@@ -20,7 +21,7 @@ angular.module('harley.controllers', [])
 	$document.on('scroll', function(){
 		var scrollPos = $document.scrollTop();
 
-		if(scrollPos < windowHeight) $scope.showBar = true; // past 2nd section
+		if(scrollPos < windowHeight+1) $scope.showBar = true; // past 2nd section
 		else if(previousScroll < scrollPos) $scope.showBar = false; // scrolling down
 		else $scope.showBar = true; // scrolling up
 
@@ -30,6 +31,22 @@ angular.module('harley.controllers', [])
 		previousScroll = scrollPos;
 		$scope.$apply();
 	});
+
+	$scope.background = function(elPos){
+	  var bgPos = elPos - 10;
+
+	  return {
+	    backgroundPosition: '50%, 10%;'
+	  };
+	};
+
+
+	// COOL SCROLLY STUFF //
+	$scope.goTo = function(section){
+		if($scope.menuOpen) $scope.menuOpen = false;
+		var target = angular.element(document.getElementById(section));
+		$document.scrollTo(target, 0, 1000, function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t });
+	};
 
 	// OPEN THE MENU //
 	$scope.menuOpen = false;
@@ -72,8 +89,4 @@ angular.module('harley.controllers', [])
 .controller('JobModalController', ['$scope', 'Job', function($scope, Job){
 	$scope.job = Job;
 }]);
-
-
-
-
 

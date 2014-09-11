@@ -25,35 +25,43 @@
           <a ng-click="toTheTop()" class="fa fa-angle-up"></a>
           <strong>Harley Alexander</strong>
           <span class="right">
-            <a href="" class="fa fa-phone"></a>
-            <a href="" class="fa fa-envelope"></a>
-            <a href="" class="fa fa-linkedin"></a>
+            <a href="tel:+61422808381" class="fa fa-phone"></a>
+            <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
+            <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a>
             <a ng-click="toggleMenu()" class="fa fa-bars"></a>
           </span>
         </div>
       </div>
     </nav>
 
-    <nav class="menu" ng-show="menuOpen">
+    <nav class="menu" ng-class="{ hidden : !menuOpen }" ng-cloak>
       <a ng-click="toggleMenu()" class="fa fa-times"></a>
       <ul>
-        <li><a>Profile</a></li>
-        <li><a>A word from me</a></li>
-        <li><a>Employment History</a></li>
-        <li><a>What I can bring to your team</a></li>
-        <li><a>A shortlist of my skills</a></li>
-        <li><a>What &amp; where I've learnt</a></li>
-        <li><a>Get in touch</a></li>
+        <li><a href="goTo('profile')">Profile</a></li>
+        <li><a ng-click="goTo('intro')">A word from me</a></li>
+        <li><a ng-click="goTo('employment')">Employment History</a></li>
+        <li><a ng-click="goTo('value')">What I can bring to your team</a></li>
+        <li><a ng-click="goTo('skills')">A shortlist of my skills</a></li>
+        <li><a ng-click="goTo('education')">What &amp; where I've learnt</a></li>
+        <li><a ng-click="goTo('contact')">Let's work together</a></li>
       </ul>
+
+      <footer>
+        <p>&copy; Harley '14 &bull
+          <a href="tel:+61422808381" class="fa fa-phone"></a>
+          <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
+          <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a>
+        </p>
+      </footer>
     </nav>
 
-    <section class="profile">
+    <section class="profile" id="profile">
       <div class="contact">
         <div class="row">
           <div class="small-12 columns buttons">
-            <a class="small clear button radius"><i class="fa fa-phone"></i></a> <br>
-            <a class="small clear button radius"><i class="fa fa-envelope"></i></a> <br>
-            <a class="small clear button radius"><i class="fa fa-linkedin"></i></a> <br>
+            <a href="tel:+61422808381" class="small clear button radius"><i class="fa fa-phone"></i></a> <br>
+            <a href="mailto:harley@baffleinc.com" class="small clear button radius"><i class="fa fa-envelope"></i></a> <br>
+            <a href="http://www.linkedin.com/profile/view?id=124411655" target="_blank" class="small clear button radius"><i class="fa fa-linkedin"></i></a> <br>
           </div>
         </div>
     
@@ -65,14 +73,14 @@
             <p><em>User Experience Designer<br>
               Digital &amp; Print Designer<br>
               Front-end Developer</em></p>
-            <p><i class="fa fa-angle-down"></i></p>
+            <p><a class="fa fa-angle-down" du-smooth-scroll href="#intro"></a></p>
           </div>
         </div>
         
       </div>
     </section>
 
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="row">
         <div class="small-12 columns">
           <p class="text-center">Hey, I'm Harley. I'm a 21 year old digital &amp; print designer / front-end developer. I have a passion for creating digital products and excellent user experiences. Recently, I've fallen in love with mobile. I've been designing and building the web for 7 years, on an enourmous range of projects. My skillset is vast, and I am looking to focus my career down the path of product design.</p>
@@ -80,7 +88,7 @@
       </div>
     </section>
 
-    <section class="employment">
+    <section class="employment" id="employment">
       <h2>Employment History</h2>
       <div ng-repeat="job in employment" class="job row {{ slug(job.company) }}">
         <div class="small-12 columns">
@@ -93,7 +101,7 @@
 
     </section>
 
-    <section class="value">
+    <section class="value" id="value">
       <h2>What can I bring to your team?</h2>
       <div ng-repeat="point in points" class="point row">
         <div class="small-12 columns">
@@ -104,7 +112,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <h2>A shortlist of my skills</h2>
       <ul>
         <li ng-repeat="skill in skills" class="{{ slug(skill.name) }}">
@@ -113,7 +121,7 @@
       </ul>
     </section>
 
-    <section class="education">
+    <section class="education" id="education">
       <h2>Education</h2>
       <div ng-repeat="edu in education" class="edu row">
         <div class="small-12 columns">
@@ -124,17 +132,23 @@
       </div>
     </section>
 
-    <section class="contact">
-      <h2>Let's catch up!</h2>
+    <section class="contact" id="contact">
+      <h2>Let's work together!</h2>
+      <p>I'm pretty friendly, and don't bite. Feel free to give me a call. If you're feeling shy, shoot me an email!</p>
+      <a href="tel:+6422808381" class="button"><i class="fa fa-phone"></i>  holler</a>
+      <a href="mailto:harley@baffleinc.com" class="button"><i class="fa fa-envelope"></i> write</a>
+      <a href="http://www.linkedin.com/profile/view?id=124411655" class="button"><i class="fa fa-linkedin"></i> stalk</a>
+      <a href="harley.vcf" class="button"><i class="fa fa-download"></i> keep</a>
     </section>
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
