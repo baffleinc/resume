@@ -179,6 +179,33 @@ angular.module('harley.services', [])
 	}
 }])
 
+.factory('Websites', [function(){
+	return {
+		links: [
+			{name: "health.com.au", url: "http://health.com.au"},
+			{name: "Uncomplexicate", url: "http://uncomplexicate.com.au"},
+			{name: "OzMattress", url: "http://ozmattress.com.au"},
+			{name: "Yummoo", url: "http://yummoo.com.au"},
+			{name: "Lighting Partners Australia", url: "http://lpaust.com.au"},
+			{name: "Lahznimmo Architects", url: "http://lahznimmo.com"},
+			{name: "Arcadia Landscape Architects", url: "http://arcadiala.com.au"}
+		]
+	}
+}])
+
+.factoy('Links', [function(){
+	return {
+		links: [
+			{name: "How to Be a Rockstar WordPress Designer", url: "https://tutsplus.com/ebook/rockstar-wordpress-designer/"},
+			{name: "An interview with me about my book", url: "http://net.tutsplus.com/articles/interviews/an-interview-with-harley-alexander/"},
+			{name: "Another interview with me about my photography", url: "http://www.artgallery.nsw.gov.au/channel/clip/218/"},
+			{name: "My articles on WPMU.org", url: "http://wpmu.org/author/harleya/"},
+			{name: "My articles on Tuts+", url: "http://nettuts.com/author/harley"},
+			{name: "A case study on the SitePoint logo", url: "http://www.sitepoint.com/sitepoints-new-logo-and-the-story-behind-it/"}
+		]
+	}
+}])
+
 .factory('Work', [function(){
 	return {
 		cases: [
