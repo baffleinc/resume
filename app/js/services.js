@@ -193,7 +193,7 @@ angular.module('harley.services', [])
 	}
 }])
 
-.factoy('Links', [function(){
+.factory('Links', [function(){
 	return {
 		links: [
 			{name: "How to Be a Rockstar WordPress Designer", url: "https://tutsplus.com/ebook/rockstar-wordpress-designer/"},

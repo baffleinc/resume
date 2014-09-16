@@ -2,8 +2,8 @@
 
 angular.module('harley.controllers', [])
 
-.controller('MainController', ['$scope', '$document', '$window', '$modal', 'Proof', 'Employment', 'Skills', 'Education', 'parallaxHelper',
-	function($scope, $document, $window, $modal, Proof, Employment, Skills, Education, parallaxHelper){
+.controller('MainController', ['$scope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education', 'parallaxHelper',
+	function($scope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education, parallaxHelper){
 
 	// FILL SCOPE WITH MY AWESOMENESS //
 	$scope.points = Proof.points;
@@ -18,27 +18,19 @@ angular.module('harley.controllers', [])
 	var previousScroll = 0;
 	var windowHeight = $window.innerHeight;
 
-	$document.on('scroll', function(){
-		var scrollPos = $document.scrollTop();
+	// $document.on('scroll', function(){
+	// 	var scrollPos = $document.scrollTop();
 
-		if(scrollPos < windowHeight+1) $scope.showBar = true; // past 2nd section
-		else if(previousScroll < scrollPos) $scope.showBar = false; // scrolling down
-		else $scope.showBar = true; // scrolling up
+	// 	if(scrollPos < windowHeight+1) $scope.showBar = true; // past 2nd section
+	// 	else if(previousScroll < scrollPos) $scope.showBar = false; // scrolling down
+	// 	else $scope.showBar = true; // scrolling up
 
-		if(scrollPos > 44) $scope.barVisible = true; // at start of page
-		else $scope.barVisible = false; // scrolling
+	// 	if(scrollPos > 44) $scope.barVisible = true; // at start of page
+	// 	else $scope.barVisible = false; // scrolling
 
-		previousScroll = scrollPos;
-		$scope.$apply();
-	});
-
-	$scope.background = function(elPos){
-	  var bgPos = elPos - 10;
-
-	  return {
-	    backgroundPosition: '50%, 10%;'
-	  };
-	};
+	// 	previousScroll = scrollPos;
+	// 	$scope.$apply();
+	// });
 
 
 	// COOL SCROLLY STUFF //

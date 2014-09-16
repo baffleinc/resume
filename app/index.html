@@ -19,7 +19,7 @@
   </head>
   <body ng-controller="MainController">
 
-    <nav class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
+    <nav headroom class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
       <div class="row">
         <div class="small-12 columns">
           <a ng-click="toTheTop()" class="fa fa-angle-up"></a>
@@ -143,12 +143,16 @@
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
-    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
+    <!-- <script src="bower_components/fastclick/lib/fastclick.js"></script> -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-foundation/mm-foundation.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation.min.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
+    <script src="js/lib/headroom.js"></script>
+    <script src="js/lib/headroom.angular.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->

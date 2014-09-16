@@ -22,16 +22,21 @@ nav.bar{
 	right: 0;
 	z-index: 99;
 
-	transform: translate3d(0, rem-calc(44px), 0);
+	
 	transition: all .3s $easeOutExpo;
-	opacity: 0;
+	
 
 	height: rem-calc(44px);
 	line-height: rem-calc(44px);
 	background-color: #fff;
 
-	&.scrolled{
+	&.headroom--pinned{
 		transform: translate3d(0, 0, 0);
+	}
+
+	&.headroom--unpinned{
+		transform: translate3d(0, rem-calc(44px), 0);
+		opacity: 0;
 	}
 
 	&.visible{
