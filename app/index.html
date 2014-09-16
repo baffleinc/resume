@@ -10,6 +10,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css css/app.min.css -->
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Raleway:600,500,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/app_override.css">
     <!-- endbuild -->
@@ -19,41 +20,7 @@
   </head>
   <body ng-controller="MainController">
 
-    <nav headroom class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
-      <div class="row">
-        <div class="small-12 columns">
-          <a ng-click="toTheTop()" class="fa fa-angle-up"></a>
-          <strong>Harley Alexander</strong>
-          <span class="right">
-            <a href="tel:+61422808381" class="fa fa-phone"></a>
-            <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
-            <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a>
-            <a ng-click="toggleMenu()" class="fa fa-bars"></a>
-          </span>
-        </div>
-      </div>
-    </nav>
-
-    <nav class="menu" ng-class="{ hidden : !menuOpen }" ng-cloak>
-      <a ng-click="toggleMenu()" class="fa fa-times"></a>
-      <ul>
-        <li><a href="goTo('profile')">Profile</a></li>
-        <li><a ng-click="goTo('intro')">A word from me</a></li>
-        <li><a ng-click="goTo('employment')">Employment History</a></li>
-        <li><a ng-click="goTo('value')">What I can bring to your team</a></li>
-        <li><a ng-click="goTo('skills')">A shortlist of my skills</a></li>
-        <li><a ng-click="goTo('education')">What &amp; where I've learnt</a></li>
-        <li><a ng-click="goTo('contact')">Let's work together</a></li>
-      </ul>
-
-      <footer>
-        <p>&copy; Harley '14 &bull
-          <a href="tel:+61422808381" class="fa fa-phone"></a>
-          <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
-          <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a>
-        </p>
-      </footer>
-    </nav>
+    <nav-menu></nav-menu>
 
     <section class="profile" id="profile">
       <div class="contact">
@@ -69,6 +36,7 @@
       <div class="table-cell me">
         <div class="row">
           <div class="small-12 columns">
+            <img src="../images/logo.png" alt="" class="logo" width="64px" height="64px" spinning-logo>
             <h1>Harley Alexander</h1>
             <p><em>User Experience Designer<br>
               Digital &amp; Print Designer<br>
@@ -89,20 +57,40 @@
     </section>
 
     <section class="employment" id="employment">
-      <h2>Employment History</h2>
-      <div ng-repeat="job in employment" class="job row {{ slug(job.company) }}">
+      <div class="row">
+        <h2 class="small-12 columns">Employment History</h2>
+      </div>
+      <div ng-repeat="job in employment" class="band row {{ slug(job.company) }}">
         <div class="small-12 columns">
-          <p class="company">{{ job.company }}</p>
+          <p class="pre-title">{{ job.company }}</p>
           <h3>{{ job.title }}</h3>
-          <a ng-click="showJob(job)">info</a>
+          <a ng-click="showJob(job)" class="info-button"><i class="fa fa-circle-thin"></i></a>
         </div>
         
       </div>
 
     </section>
 
+    <section class="skills" id="skills">
+      <div class="row">
+        <div class="small-12 columns">
+          <h2>A shortlist of my skills</h2>
+          <ul class="no-bullet">
+            <li ng-repeat="skill in skills" class="{{ slug(skill.name) }}">
+              <div class="table">
+                <span>{{ skill.name }}</span>  
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="value" id="value">
-      <h2>What can I bring to your team?</h2>
+      <div class="row">
+        <h2 class="small-12 columns">What can I bring to your team?</h2>
+      </div>
+      
       <div ng-repeat="point in points" class="point row">
         <div class="small-12 columns">
           <h3>{{ point.title }}</h3>
@@ -112,20 +100,13 @@
       </div>
     </section>
 
-    <section class="skills" id="skills">
-      <h2>A shortlist of my skills</h2>
-      <ul>
-        <li ng-repeat="skill in skills" class="{{ slug(skill.name) }}">
-          {{ skill.name }}
-        </li>
-      </ul>
-    </section>
-
     <section class="education" id="education">
-      <h2>Education</h2>
-      <div ng-repeat="edu in education" class="edu row">
+      <div class="row">
+        <h2 class="small-12 columns">Education</h2>
+      </div>
+      <div ng-repeat="edu in education" class="band row">
         <div class="small-12 columns">
-          <p class="place">{{ edu.location }}</p>
+          <p class="pre-title">{{ edu.location }}</p>
           <h3>{{ edu.name }}</h3>
           <h4>{{ edu.subtitle }}</h4>
         </div>
@@ -133,24 +114,29 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2>Let's work together!</h2>
-      <p>I'm pretty friendly, and don't bite. Feel free to give me a call. If you're feeling shy, shoot me an email!</p>
-      <a href="tel:+6422808381" class="button"><i class="fa fa-phone"></i>  holler</a>
-      <a href="mailto:harley@baffleinc.com" class="button"><i class="fa fa-envelope"></i> write</a>
-      <a href="http://www.linkedin.com/profile/view?id=124411655" class="button"><i class="fa fa-linkedin"></i> stalk</a>
-      <a href="harley.vcf" class="button"><i class="fa fa-download"></i> keep</a>
+      <div class="row">
+        <div class="small-12 columns">
+          <h2>Let's work together!</h2>
+          <p>I'm pretty friendly, and don't bite. Feel free to give me a call. If you're feeling shy, shoot me an email!</p>
+          <a href="tel:+6422808381" class="button"><i class="fa fa-phone"></i>  holler</a>
+          <a href="mailto:harley@baffleinc.com" class="button"><i class="fa fa-envelope"></i> write</a>
+          <a href="http://www.linkedin.com/profile/view?id=124411655" class="button"><i class="fa fa-linkedin"></i> connect</a>
+          <a href="harley.vcf" class="button"><i class="fa fa-download"></i> keep</a>
+        </div>
+      </div>
     </section>
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
-    <!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
-    <!-- <script src="bower_components/fastclick/lib/fastclick.js"></script> -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
+    <script src="bower_components/angular-parallax/scripts/angular-parallax.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-foundation/mm-foundation.min.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation.js"></script>
     <script src="js/lib/headroom.js"></script>
     <script src="js/lib/headroom.angular.js"></script>
     <!-- endbower -->
@@ -159,6 +145,7 @@
     <script src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
     <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
     <!-- endbuild -->
   </body>
 </html>

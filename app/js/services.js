@@ -171,7 +171,7 @@ angular.module('harley.services', [])
 			{ name: "An innovative mind" },
 			{ name: "Creativity" },
 			{ name: "Attention to detail" },
-			{ name: "Customer relations & experience" },
+			{ name: "Client relations" },
 			{ name: "Cooking" },
 			{ name: "Coffee Making" },
 			{ name: "Lifting" }

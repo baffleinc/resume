@@ -6,6 +6,21 @@ $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
 body, html{
 	height: 100%;
+	font-family: "Raleway";
+	background-color: #f5f2e9;
+}
+
+h3{
+	font-family: "Playfair Display";
+}
+
+h2,
+h4{
+	font-family: "Raleway";
+}
+
+h2{
+	font-weight: 700;
 }
 
 .button{
@@ -28,7 +43,7 @@ nav.bar{
 
 	height: rem-calc(44px);
 	line-height: rem-calc(44px);
-	background-color: #fff;
+	background-color: #fdfcf7;
 
 	&.headroom--pinned{
 		transform: translate3d(0, 0, 0);
@@ -36,11 +51,19 @@ nav.bar{
 
 	&.headroom--unpinned{
 		transform: translate3d(0, rem-calc(44px), 0);
+	}
+
+	&.headroom--top{
 		opacity: 0;
 	}
 
-	&.visible{
+	&.headroom-not-top{
 		opacity: 1;
+	}
+
+	.fa{
+		margin-right: 10px;
+		font-size: rem-calc(18px);
 	}
 }
 
@@ -81,7 +104,93 @@ nav.menu{
 			opacity: 0;
 		}
 	}
+}
+
+.reveal-modal{
+	display: table;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow: auto;
+	.job-desc{
+		display: table-cell;
+		vertical-align: middle;
+
+		h2{
+			font-family: "Playfair Display";
+		}
+
+		h3{
+
+		}
+	}
+
+	.hamburger-cross-button{
+		position: absolute;
+		top: -1em;
+		right: 1em;
+	}
+}
+
+.hamburger-cross-button{
+	width: 44px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  transform: rotate(0deg);
+  transition: .5s $easeInOutExpo;
+  cursor: pointer;
+
+  span{
+  	display: block;
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background: $red;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+
+		transition: .25s $easeInOutExpo;
 	
+		&:nth-child(1) {
+		  top: 0px;
+		  transform-origin: left center;
+		}
+
+		&:nth-child(2) {
+		  top: 18px;
+		  transform-origin: left center;
+		}
+
+		&:nth-child(3) {
+		  top: 36px;
+		  transform-origin: left center;
+		}
+  }
+
+  &.open{
+  	span{
+  		&:nth-child(1) {
+			  transform: rotate(45deg);
+			  top: 0px;
+			  left: 0px;
+			}
+
+			&:nth-child(2) {
+			  width: 0%;
+			  opacity: 0;
+			}
+
+			&:nth-child(3) {
+			  transform: rotate(-45deg);
+			  top: 31px;
+			  left: 0px;
+			}
+  	}
+  }
 }
 
 .reveal-modal,
@@ -97,19 +206,26 @@ nav.menu{
 		visibility: visible;
 		display: block;
 	}
+
+	.close{
+		position: absolute;
+	}
+}
+
+section{
+	margin-bottom: 4em;
 }
 
 section.profile{
-	height: 100%;
+	height: 105%;
 	width: 100%;
+
+	margin-bottom: 0;
 
 	position: relative;
 	z-index: 98;
 
 	background: url(../images/harley.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 
   display: table;
@@ -123,6 +239,8 @@ section.profile{
 
 		padding-bottom: rem-calc(44px);
 
+		
+
   	background: rgba(0,0,0,0.7);
 		background: -moz-linear-gradient(bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
 		background: -webkit-gradient(bottom top, right top, color-stop(0%, rgba(0,0,0,0.7)), color-stop(100%, rgba(0,0,0,0)));
@@ -132,9 +250,17 @@ section.profile{
 		background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
 
+		h1{
+			font-family: "Raleway";
+			font-size: rem-calc(48px);
+			text-transform: uppercase;
+		}
+
 		h1,
 		p, em{
 			color: #fff;
+			font-family: "Playfair Display";
+			font-weight: 400!important;
 		}
   }
 
@@ -158,37 +284,110 @@ section.profile{
 }
 
 section.intro{
-	height: 100%;
+	height: 115%;
 	display: table;
+	background-color: $green;
+	margin-bottom: 5em;
+	position: relative;
+
+	&:after{
+		content: "";
+		display: block;
+		width: 100%;
+		height: rem-calc(33px);
+		background: red url(../images/repeater-2.gif) repeat-x left bottom;
+		position: absolute;
+		bottom: rem-calc(-33px);
+		left: 0;
+		right: 0;
+	}
+
+	font-family: "Playfair Display";
+	p{
+		font-size: rem-calc(18px);
+	}
 
 	>.row{
 		display: table-cell;
 		vertical-align: middle;
 	}
 }
-section.employment{
-	.job{
+
+
+
+section.employment,
+section.education{
+	.band{
 		padding-top: 1em;
 		padding-bottom: 1em;
+		position: relative;
 
 		&:nth-child(even){
-			background-color: #e9e9e9;
+			background-color: #efe9dc;
 		}
 
-		p.company{
+		p.pre-title{
 			margin-bottom: 0;
+			color: $third-color;
 		}
 
 		h3{
 			margin: 0;
+			padding-right: 2em;
+		}
+
+		.info-button{
+			position: absolute;
+			right: 1em;
+			top: rem-calc(50%);
+			font-size: rem-calc(22px);
+			margin-top: rem-calc(-22px);
 		}
 	}
 }
 
+section.education{
+	
+}
 
 
+section.skills{
+	ul {
+		li{
 
+			
 
+			font-size: 1.2em;
+			margin: 0;
+
+			display: inline-block;
+			padding: 3px 5px;
+			background-color: #8fbe00;
+			margin: 3px;
+		}
+	}
+}
+
+section.contact{
+	background-color: $green;
+	margin-bottom: 0;
+	padding: 2em 0;
+	position: relative;
+
+	&:before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: rem-calc(33px);
+		background: red url(../images/repeater-2.gif) repeat-x left bottom;
+		position: absolute;
+		top: rem-calc(-33px);
+		left: 0;
+		right: 0;
+
+		transform: scaleY(-1);
+	}
+}
 
 
 

@@ -8,5 +8,6 @@ angular.module('harley', [
 	'mm.foundation',
 	'ngAnimate',
 	'harley.controllers',
-	'harley.services'
+	'harley.services',
+	'harley.directives'
 ])
