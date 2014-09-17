@@ -48,6 +48,7 @@ angular.module('harley.directives', [])
 				$modal.open({
 					templateUrl: '/template/menu-popup.html',
 					controller: function($scope){
+						// COOL SCROLLY STUFF //
 						$scope.goTo = function(section){
 							$scope.$close();
 							var target = angular.element(document.getElementById(section));
@@ -55,12 +56,6 @@ angular.module('harley.directives', [])
 						};
 					}
 				});
-			};
-
-			// COOL SCROLLY STUFF //
-			scope.goTo = function(section){
-				if(scope.menuOpen) scope.menuOpen = false;
-				
 			};
 		}
 	};

@@ -16,10 +16,32 @@ $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
   }
 }
 
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+@keyframes Floatingk{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
 body, html{
 	height: 100%;
 	font-family: "Raleway";
 	background-color: #f5f2e9;
+}
+
+body.modal-open{
+	overflow: hidden;
 }
 
 h3{
@@ -60,6 +82,10 @@ nav.bar{
 	line-height: rem-calc(44px);
 	background-color: #fdfcf7;
 
+	strong{
+		font-family: "Playfair Display";
+	}
+
 	&.headroom--pinned,
 	&.scrolled{
 		transform: translate3d(0, 0, 0);
@@ -85,6 +111,26 @@ nav.bar{
 	}
 }
 
+.close-button{
+	display: block;
+	width: 100%;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+
+	background-color: $green;
+	text-align: center;
+	line-height: rem-calc(48px);
+
+	i{
+		color: #fff;
+		position: relative;
+		top: rem-calc(4px);
+	}
+}
+
 nav.menu{
 	position: fixed;
 	z-index: 100;
@@ -92,10 +138,47 @@ nav.menu{
 	right: 0;
 	bottom: 0;
 	top: 0;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 	background-color: rgba(255,255,255,0.8);
+	background-color: #404040;
 	visibility: visible;
 
 	transition: all .5s $easeOutExpo;
+
+	ul{
+		padding-top: rem-calc(44px);
+		li{
+			font-family: "Playfair Display";
+			font-size: 2em;
+			border-bottom: 1px solid #505050;
+			padding-top: .5em;
+			font-style: italic;
+
+			a{
+				color: #ddd;
+				display: inline-block;
+				background-color: #505050;
+				padding: 0 3px;
+			}
+		}
+	}
+
+	footer{
+		color: #fff;
+		line-height: 32px;
+
+		.fa{
+			display: inline-block;
+			background-color: $green;
+			width: 32px;
+			height: 32px;
+			margin-right: 10px;
+			line-height: 32px;
+			text-align: center;
+			color: #404040;
+		}
+	}
 
 	&.hidden{
 		transform: scale(.9);
@@ -133,6 +216,7 @@ nav.menu{
 	left: 0;
 	overflow: auto;
 	.job-desc{
+		padding-top: rem-calc(44px);
 		display: table-cell;
 		vertical-align: middle;
 
@@ -281,6 +365,19 @@ section.profile{
 			font-family: "Playfair Display";
 			font-weight: 400!important;
 		}
+
+		a{
+			color: #fff;
+
+			-webkit-animation-name: Floatingx;
+	    -webkit-animation-duration: 2s;
+	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation-timing-function: ease-in-out;
+	    -moz-animation-name: Floating;
+	    -moz-animation-duration: 2s;
+	    -moz-animation-iteration-count: infinite;
+	    -moz-animation-timing-function: ease-in-out;
+		}
   }
 
 	.contact{
@@ -312,13 +409,11 @@ section.intro{
 		display: block;
 		width: 100%;
 		height: rem-calc(33px);
-		background: red url(../images/repeater-2.gif) repeat-x left bottom;
+		background: url(../images/repeater-2.gif) repeat-x left bottom;
 		position: absolute;
-		bottom: rem-calc(-33px);
 		left: 0;
 		right: 0;
-
-		
+		bottom: rem-calc(-33px);
 		@include image-2x('../images/repeater.gif', 64px, 33px);
 	}
 
@@ -389,6 +484,36 @@ section.skills{
 		}
 	}
 } 
+
+section.value{
+	background-color: #00a8c6;
+	padding: 2em 0;
+	position: relative;
+
+	&:before,
+	&:after{
+		content: "";
+		display: block;
+		width: 100%;
+		height: rem-calc(22px);
+		background: url(../images/blue-repeater.gif) repeat-x left bottom;
+		background-size: 46px 22px;
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		@include image-2x('../images/blue-repeater@2x.gif', 46px, 22px);
+	}
+
+	&:before{
+		top: rem-calc(-22px);
+	}
+
+	&:after{
+		bottom: rem-calc(-22px);
+		transform: scaleY(-1);
+	}
+}
 
 section.contact{
 	background-color: $green;

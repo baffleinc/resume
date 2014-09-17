@@ -31,7 +31,7 @@ angular.module('harley.controllers', [])
 		});
 	}
 
-	// COOL HIDING MENU (f*ckya headroom.js for not working on mobile) //
+	// COOL HIDING MENU BAR (f*ckya headroom.js for not working on mobile) //
 
 	$document.on('scroll', function(){
 		var scrollPos = $document.scrollTop();

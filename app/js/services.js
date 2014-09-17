@@ -149,7 +149,7 @@ angular.module('harley.services', [])
 			{ name: "Information Architecture" },
 			{ name: "Design Thinking" },
 			{ name: "Working with brands" },
-			{ name: "Campaigning & Conversions" },
+			{ name: "Campaigns & Conversions" },
 			{ name: "Prototype sketching & build" },
 			{ name: "Photoshop" },
 			{ name: "Illustrator" },
@@ -173,8 +173,7 @@ angular.module('harley.services', [])
 			{ name: "Attention to detail" },
 			{ name: "Client relations" },
 			{ name: "Cooking" },
-			{ name: "Coffee Making" },
-			{ name: "Lifting" }
+			{ name: "Coffee Making" }
 		]
 	}
 }])

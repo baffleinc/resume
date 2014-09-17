@@ -5802,10 +5802,43 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 /* all app scss styles here */
+@-webkit-keyframes Floatingx {
+  from {
+    -webkit-transform: translate(0, 0px); }
+
+  65% {
+    -webkit-transform: translate(0, 15px); }
+
+  to {
+    -webkit-transform: translate(0, -0px); } }
+
+@-moz-keyframes Floating {
+  from {
+    -moz-transform: translate(0, 0px); }
+
+  65% {
+    -moz-transform: translate(0, 15px); }
+
+  to {
+    -moz-transform: translate(0, -0px); } }
+
+@keyframes Floatingk {
+  from {
+    -moz-transform: translate(0, 0px); }
+
+  65% {
+    -moz-transform: translate(0, 15px); }
+
+  to {
+    -moz-transform: translate(0, -0px); } }
+
 body, html {
   height: 100%;
   font-family: "Raleway";
   background-color: #f5f2e9; }
+
+body.modal-open {
+  overflow: hidden; }
 
 h3 {
   font-family: "Playfair Display"; }
@@ -5834,6 +5867,8 @@ nav.bar {
   height: 2.75rem;
   line-height: 2.75rem;
   background-color: #fdfcf7; }
+  nav.bar strong {
+    font-family: "Playfair Display"; }
   nav.bar.headroom--pinned, nav.bar.scrolled {
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0); }
@@ -5847,6 +5882,21 @@ nav.bar {
     margin-right: 10px;
     font-size: 1.125rem; }
 
+.close-button {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #aee239;
+  text-align: center;
+  line-height: 3rem; }
+  .close-button i {
+    color: #fff;
+    position: relative;
+    top: 0.25rem; }
+
 nav.menu {
   position: fixed;
   z-index: 100;
@@ -5854,9 +5904,38 @@ nav.menu {
   right: 0;
   bottom: 0;
   top: 0;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   background-color: rgba(255, 255, 255, 0.8);
+  background-color: #404040;
   visibility: visible;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+  nav.menu ul {
+    padding-top: 2.75rem; }
+    nav.menu ul li {
+      font-family: "Playfair Display";
+      font-size: 2em;
+      border-bottom: 1px solid #505050;
+      padding-top: 0.5em;
+      font-style: italic; }
+      nav.menu ul li a {
+        color: #ddd;
+        display: inline-block;
+        background-color: #505050;
+        padding: 0 3px; }
+  nav.menu footer {
+    color: #fff;
+    line-height: 32px; }
+    nav.menu footer .fa {
+      display: inline-block;
+      background-color: #aee239;
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      line-height: 32px;
+      text-align: center;
+      color: #404040; }
   nav.menu.hidden {
     transform: scale(0.9);
     opacity: 0;
@@ -5883,6 +5962,7 @@ nav.menu {
   left: 0;
   overflow: auto; }
   .reveal-modal .job-desc, .reveal-modal dialog {
+    padding-top: 2.75rem;
     display: table-cell;
     vertical-align: middle; }
     .reveal-modal .job-desc h2, .reveal-modal .job-desc dialog {
@@ -5977,6 +6057,16 @@ section.profile {
       color: #fff;
       font-family: "Playfair Display";
       font-weight: 400 !important; }
+    section.profile .me a {
+      color: #fff;
+      -webkit-animation-name: Floatingx;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-name: Floating;
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: ease-in-out; }
   section.profile .contact {
     position: absolute;
     left: 0;
@@ -6001,11 +6091,11 @@ section.intro {
     display: block;
     width: 100%;
     height: 2.0625rem;
-    background: red url(../images/repeater-2.gif) repeat-x left bottom;
+    background: url(../images/repeater-2.gif) repeat-x left bottom;
     position: absolute;
-    bottom: -2.0625rem;
     left: 0;
-    right: 0; }
+    right: 0;
+    bottom: -2.0625rem; }
     @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
       section.intro:after {
         /* on retina, use image that's scaled by 2 */
@@ -6046,6 +6136,31 @@ section.skills ul li {
   padding: 3px 5px;
   background-color: #8fbe00;
   margin: 3px; }
+
+section.value {
+  background-color: #00a8c6;
+  padding: 2em 0;
+  position: relative; }
+  section.value:before, section.value:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.375rem;
+    background: url(../images/blue-repeater.gif) repeat-x left bottom;
+    background-size: 46px 22px;
+    position: absolute;
+    left: 0;
+    right: 0; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      section.value:before, section.value:after {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url('../images/blue-repeater@2x.gif');
+        background-size: 46px 22px; } }
+  section.value:before {
+    top: -1.375rem; }
+  section.value:after {
+    bottom: -1.375rem;
+    transform: scaleY(-1); }
 
 section.contact {
   background-color: #aee239;
