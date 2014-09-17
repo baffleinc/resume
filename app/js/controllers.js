@@ -31,6 +31,22 @@ angular.module('harley.controllers', [])
 		});
 	}
 
+	// COOL HIDING MENU (f*ckya headroom.js for not working on mobile) //
+
+	$document.on('scroll', function(){
+		var scrollPos = $document.scrollTop();
+
+		if(scrollPos < windowHeight+1) $scope.showBar = true; // past 2nd section
+		else if(previousScroll < scrollPos) $scope.showBar = false; // scrolling down
+		else $scope.showBar = true; // scrolling up
+
+		if(scrollPos > 44) $scope.barVisible = true; // at start of page
+		else $scope.barVisible = false; // scrolling
+
+		previousScroll = scrollPos;
+		$scope.$apply();
+	});
+
 	// UTILITY FUNCTIONS //
 
 	$scope.slug = function(text){

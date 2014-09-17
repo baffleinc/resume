@@ -5826,17 +5826,22 @@ nav.bar {
   left: 0;
   right: 0;
   z-index: 99;
+  transform: translate3d(0, 2.75rem, 0);
+  -webkit-transform: translate3d(0, 2.75rem, 0);
+  opacity: 0;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   height: 2.75rem;
   line-height: 2.75rem;
   background-color: #fdfcf7; }
-  nav.bar.headroom--pinned {
-    transform: translate3d(0, 0, 0); }
+  nav.bar.headroom--pinned, nav.bar.scrolled {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0); }
   nav.bar.headroom--unpinned {
     transform: translate3d(0, 2.75rem, 0); }
   nav.bar.headroom--top {
     opacity: 0; }
-  nav.bar.headroom-not-top {
+  nav.bar.headroom-not-top, nav.bar.visible {
     opacity: 1; }
   nav.bar .fa {
     margin-right: 10px;
@@ -5965,7 +5970,8 @@ section.profile {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 ); }
     section.profile .me h1 {
       font-family: "Raleway";
-      font-size: 3rem;
+      font-size: 3.125rem;
+      line-height: 1;
       text-transform: uppercase; }
     section.profile .me h1, section.profile .me p, section.profile .me em {
       color: #fff;
@@ -5981,8 +5987,7 @@ section.profile {
       width: 2.5rem;
       padding-left: 0;
       padding-right: 0;
-      text-align: center;
-      clear: both; }
+      text-align: center; }
 
 section.intro {
   height: 115%;
@@ -6031,6 +6036,9 @@ section.employment .band, section.education .band {
     font-size: 1.375rem;
     margin-top: -1.375rem; }
 
+section.education h4 {
+  font-size: 0.8em; }
+
 section.skills ul li {
   font-size: 1.2em;
   margin: 0;
@@ -6049,7 +6057,8 @@ section.contact {
     display: block;
     width: 100%;
     height: 2.0625rem;
-    background: red url(../images/repeater-2.gif) repeat-x left bottom;
+    background: url(../images/repeater-2.gif) repeat-x left bottom;
+    background-size: 64px 33px;
     position: absolute;
     top: -2.0625rem;
     left: 0;

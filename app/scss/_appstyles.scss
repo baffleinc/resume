@@ -49,16 +49,21 @@ nav.bar{
 	right: 0;
 	z-index: 99;
 
-	
+	transform: translate3d(0, rem-calc(44px), 0);
+	-webkit-transform: translate3d(0, rem-calc(44px), 0);
+	opacity: 0;
 	transition: all .3s $easeOutExpo;
+	-webkit-transition: all .3s $easeOutExpo;
 	
 
 	height: rem-calc(44px);
 	line-height: rem-calc(44px);
 	background-color: #fdfcf7;
 
-	&.headroom--pinned{
+	&.headroom--pinned,
+	&.scrolled{
 		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
 	}
 
 	&.headroom--unpinned{
@@ -69,7 +74,8 @@ nav.bar{
 		opacity: 0;
 	}
 
-	&.headroom-not-top{
+	&.headroom-not-top,
+	&.visible{
 		opacity: 1;
 	}
 
@@ -264,7 +270,8 @@ section.profile{
 
 		h1{
 			font-family: "Raleway";
-			font-size: rem-calc(48px);
+			font-size: rem-calc(50px);
+			line-height: 1;
 			text-transform: uppercase;
 		}
 
@@ -289,8 +296,6 @@ section.profile{
 			padding-left: 0;
 			padding-right: 0;
 			text-align: center;
-
-			clear: both;
 		}
 	}
 }
@@ -362,7 +367,9 @@ section.education{
 }
 
 section.education{
-	
+	h4{
+		font-size: .8em;
+	}
 }
 
 
@@ -381,7 +388,7 @@ section.skills{
 			margin: 3px;
 		}
 	}
-}
+} 
 
 section.contact{
 	background-color: $green;
@@ -394,7 +401,8 @@ section.contact{
 		display: block;
 		width: 100%;
 		height: rem-calc(33px);
-		background: red url(../images/repeater-2.gif) repeat-x left bottom;
+		background: url(../images/repeater-2.gif) repeat-x left bottom;
+		background-size: 64px 33px;
 		position: absolute;
 		top: rem-calc(-33px);
 		left: 0;
