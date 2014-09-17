@@ -71,16 +71,35 @@ nav.bar{
 	right: 0;
 	z-index: 99;
 
+
+
 	transform: translate3d(0, rem-calc(44px), 0);
 	-webkit-transform: translate3d(0, rem-calc(44px), 0);
 	opacity: 0;
-	transition: all .3s $easeOutExpo;
-	-webkit-transition: all .3s $easeOutExpo;
+	transition: all .5s $easeOutExpo;
+	-webkit-transition: all 1s $easeOutExpo;
 	
 
 	height: rem-calc(44px);
 	line-height: rem-calc(44px);
 	background-color: #fdfcf7;
+
+	@media #{$large-up}{
+		bottom: none;
+		top: 0;
+		transform: translate3d(0, -5rem, 0);
+		-webkit-transform: translate3d(0, -5rem, 0);
+		opacity: 0;
+		background-color: rgba(255,255,255,.95);
+		line-height: 5em;
+		height: 5em;
+
+		strong{
+			font-size: 1.4em;
+			font-weight: normal;
+		}
+
+	}
 
 	strong{
 		font-family: "Playfair Display";
@@ -116,6 +135,8 @@ nav.bar{
 	width: 100%;
 
 	position: absolute;
+
+	z-index: 99;
 	left: 0;
 	top: 0;
 	right: 0;
@@ -130,6 +151,42 @@ nav.bar{
 		top: rem-calc(4px);
 	}
 }
+
+// THIS IS FOR POST MODAL OPEN AWESOME SAUCE //
+
+.reveal-modal{
+
+	.job-desc.columns{
+		> * {
+			transform: translateY(-1em);
+			opacity: 0;
+		}
+		
+	}
+
+	&.in{
+
+		li{
+			transform: translateY(0);
+			opacity: 1;
+			
+			@for $i from 0 through 7 {
+				&:nth-child(#{$i}){
+					transition-delay: .1s + ($i / 20);
+				}
+			}
+		}
+
+		.fa-times{
+			transform: rotate(0deg);
+			opacity: 1;
+		}
+	}
+}
+
+// END AWESOME CONTINUE MORE AWESOME //
+
+
 
 nav.menu{
 	position: fixed;
@@ -147,12 +204,20 @@ nav.menu{
 
 	ul{
 		padding-top: rem-calc(44px);
+
+		@media #{$large-up}{
+			padding-top: rem-calc(88px);
+		}
+
 		li{
 			font-family: "Playfair Display";
 			font-size: 2em;
 			border-bottom: 1px solid #505050;
 			padding-top: .5em;
 			font-style: italic;
+			transform: translateY(-1em);
+			transition: all .3s $easeOutExpo;
+			opacity: 0;
 
 			a{
 				color: #ddd;
@@ -204,6 +269,10 @@ nav.menu{
 			opacity: 0;
 		}
 	}
+
+	&.visible-add-active{
+
+	}
 }
 
 .reveal-modal{
@@ -214,6 +283,13 @@ nav.menu{
 	right: 0;
 	left: 0;
 	overflow: auto;
+
+	.fa-times{
+		transform: rotate(-90deg);
+		opacity: 0;
+		transition: all .3s linear;
+	}
+
 	.job-desc{
 		padding-top: rem-calc(44px);
 		display: table-cell;
@@ -297,6 +373,8 @@ nav.menu{
 .reveal-modal,
 .reveal-modal-bg{
 
+	max-width: 100%;
+
 	opacity: 0;
 	transform: scale(.9);
 	transition: all .3s $easeOutExpo;
@@ -326,7 +404,9 @@ section.profile{
 	position: relative;
 	z-index: 98;
 
-	background: url(../images/harley.jpg) no-repeat center center; 
+	background: $blue;
+
+	background: url(../images/city.jpg) no-repeat center center; 
   background-size: cover;
 
   display: table;
@@ -377,6 +457,17 @@ section.profile{
 	    -moz-animation-iteration-count: infinite;
 	    -moz-animation-timing-function: ease-in-out;
 		}
+
+		@media #{$large-up}{
+			h1{
+				font-size: rem-calc(120px);
+			}
+
+			img.logo{
+				width: 128px;
+				height: auto;
+			}
+		}
   }
 
 	.contact{
@@ -419,6 +510,12 @@ section.intro{
 	font-family: "Playfair Display";
 	p{
 		font-size: rem-calc(18px);
+
+		@media #{$large-up}{
+			font-size: rem-calc(36px);
+			width: $row-width;
+			margin: 0 auto;
+		}
 	}
 
 	>.row{
@@ -450,6 +547,11 @@ section.education{
 			padding-right: 2em;
 		}
 
+		h4{
+			font-size: 1em;
+			opacity: .5;
+		}
+
 		.info-button{
 			position: absolute;
 			right: 1em;
@@ -468,6 +570,11 @@ section.education{
 
 
 section.skills{
+
+	@media #{$large-up}{
+		padding: 5em 0;
+	}
+
 	ul {
 		li{
 
@@ -475,19 +582,42 @@ section.skills{
 
 			font-size: 1.2em;
 			margin: 0;
-
 			display: inline-block;
 			padding: 3px 5px;
-			background-color: #8fbe00;
+			background-color: $green;
 			margin: 3px;
+
+			transition: background-color 2s $easeOutExpo;
+
+			&:hover{
+				background-color: #8fbe00;
+			}
 		}
 	}
 } 
 
 section.value{
 	background-color: #00a8c6;
-	padding: 2em 0;
+	padding: 5em 0;
 	position: relative;
+
+	h2{
+		color: #0d6170;
+	}
+
+	@media #{$large-up}{
+		.point{
+			padding: 2em 0;
+		}
+	}
+
+	.point:last-child hr{
+		display: none;
+	}
+
+	hr{
+		opacity: .4;
+	}
 
 	&:before,
 	&:after{
@@ -517,7 +647,7 @@ section.value{
 section.contact{
 	background-color: $green;
 	margin-bottom: 0;
-	padding: 2em 0;
+	padding: 5em 0 0;
 	position: relative;
 
 	&:before{
@@ -533,10 +663,18 @@ section.contact{
 		right: 0;
 
 		transform: scaleY(-1);
+	}
 
-
+	.small.clear.button{
+		color: #59720b;
+		border-color: #59720b;
+		border-radius: 2px;
 	}
 }
 
+footer.footer{
+	background-color: $green;
+	padding-bottom: rem-calc(44px);
+}
 
 
