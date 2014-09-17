@@ -52,7 +52,7 @@ angular.module('harley.directives', [])
 							$scope.$close();
 							var target = angular.element(document.getElementById(section));
 							$document.scrollTo(target, 0, 1000, function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t });
-						}
+						};
 					}
 				});
 			};

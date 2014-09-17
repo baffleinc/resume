@@ -1,11 +1,12 @@
 TODO wireframe
-	- add parallax to profile (AT RISK)
 	- add extra links
 	- Tighten up content
 	- desktop view
 
 TODO design
-	- get started
+	- add logo to job popup
+	- style "what can I bring" section
+	- style skill list
 
 TODO polish
 	- proof read (dad + mum?)
