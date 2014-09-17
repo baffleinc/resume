@@ -24,7 +24,13 @@ module.exports = function(grunt) {
 			}
 		},
 
-		
+		autoprefixer: {
+			dist: {
+				files: {
+					'<%= app %>/css/app.prefixed.css': '<%= app %>/css/app.css'
+				}
+			}
+		},
 
 		jshint: {
 			options: {
@@ -94,11 +100,11 @@ module.exports = function(grunt) {
 		watch: {
 			grunt: {
 				files: ['Gruntfile.js'],
-				tasks: ['sass']
+				tasks: ['sass', 'autoprefixer']
 			},
 			sass: {
 				files: '<%= app %>/scss/**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'autoprefixer']
 			},
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
@@ -148,7 +154,7 @@ module.exports = function(grunt) {
 	});
 
 	
-	grunt.registerTask('compile-sass', ['sass']);
+	grunt.registerTask('compile-sass', ['sass', 'autoprefixer']);
 	grunt.registerTask('bower-install', ['wiredep']);
 	
 	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
