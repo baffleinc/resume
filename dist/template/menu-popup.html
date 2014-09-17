@@ -1,20 +1,28 @@
 <nav class="menu" ng-cloak>
-  <a ng-click="$close()" hamburger-button open="true"></a>
-  <ul>
-    <li><a href="goTo('profile')">Profile</a></li>
-    <li><a ng-click="goTo('intro')">A word from me</a></li>
-    <li><a ng-click="goTo('employment')">Employment History</a></li>
-    <li><a ng-click="goTo('value')">What I can bring to your team</a></li>
-    <li><a ng-click="goTo('skills')">A shortlist of my skills</a></li>
-    <li><a ng-click="goTo('education')">What &amp; where I've learnt</a></li>
-    <li><a ng-click="goTo('contact')">Let's work together</a></li>
-  </ul>
+  <!-- <a ng-click="$close()" hamburger-button open="true"></a> -->
 
-  <footer>
-    <p>&copy; Harley '14 &bull
-      <a href="tel:+61422808381" class="fa fa-phone"></a>
-      <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
-      <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a>
-    </p>
+  <a ng-click="$close()" class="close-button"><i class="fa fa-times fa-2x"></i></a>
+  <div class="row">
+    <div class="small-12 columns">
+      <ul class="no-bullet">
+        <li><a href="goTo('profile')">Meet me</a></li>
+        <li><a ng-click="goTo('intro')">A word</a></li>
+        <li><a ng-click="goTo('employment')">Work</a></li>
+        <li><a ng-click="goTo('value')">Values</a></li>
+        <li><a ng-click="goTo('skills')">Skills</a></li>
+        <li><a ng-click="goTo('education')">Learning</a></li>
+        <li><a ng-click="goTo('contact')">Say hello!</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="row">
+    <div class="small-12 columns">
+      <p><img src="../images/logo.png" width="64px" height="64px" alt=""></p>
+      <p><span class="right">&copy; Harley '14</span>
+        <a href="tel:+61422808381" class="fa fa-phone"></a>
+        <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
+        <a href="http://www.linkedin.com/profile/view?id=124411655" target="_blank" class="fa fa-linkedin"></a>
+      </p>
+    </div>
   </footer>
 </nav>
