@@ -140,7 +140,6 @@ nav.menu{
 	top: 0;
 	overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
-	background-color: rgba(255,255,255,0.8);
 	background-color: #404040;
 	visibility: visible;
 
@@ -328,6 +327,9 @@ section.profile{
 	z-index: 98;
 
 	background: url(../images/harley.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   display: table;
