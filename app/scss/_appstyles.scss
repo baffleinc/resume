@@ -99,6 +99,17 @@ nav.bar{
 			font-weight: normal;
 		}
 
+		.desktop-menu-button{
+			display: block;
+			position: absolute;
+			font-size: 2em!important;
+			left: 50%;
+			margin-left: -.5em;
+			top: .7em;
+			z-index: 8;
+			color: $green;
+		}
+
 	}
 
 	strong{
@@ -290,10 +301,26 @@ nav.menu{
 		transition: all .3s linear;
 	}
 
+	.ref{
+			position: absolute;
+			margin-left: 1em;
+			display: block;
+			bottom: 1em;
+			text-transform: uppercase;
+			font-size: .8em;
+			color: $red;
+
+			&:hover{
+				padding-bottom: 3em;
+			}
+		}
+
 	.job-desc{
 		padding-top: rem-calc(44px);
 		display: table-cell;
 		vertical-align: middle;
+
+
 
 		h2{
 			font-family: "Playfair Display";
@@ -416,6 +443,17 @@ section.profile{
   	vertical-align: bottom;
   }
 
+  svg{
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	width: 100%;
+
+  	polygon{
+  		fill: red;
+  	}
+  }
+
   .me{
 
 		padding-bottom: rem-calc(44px);
@@ -493,6 +531,7 @@ section.intro{
 	background-color: $green;
 	margin-bottom: 5em;
 	position: relative;
+	z-index: 9;
 
 	&:after{
 		content: "";
@@ -568,6 +607,17 @@ section.education{
 	}
 }
 
+section.employment{
+	.job{
+		cursor: pointer;
+
+		transition: all .3s $easeOutExpo;
+
+		&:hover{
+			transform: scale(1.02);
+		}
+	}
+}
 
 section.skills{
 

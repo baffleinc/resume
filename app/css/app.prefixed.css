@@ -5857,7 +5857,16 @@ nav.bar {
       height: 5em; }
       nav.bar strong {
         font-size: 1.4em;
-        font-weight: normal; } }
+        font-weight: normal; }
+      nav.bar .desktop-menu-button {
+        display: block;
+        position: absolute;
+        font-size: 2em !important;
+        left: 50%;
+        margin-left: -0.5em;
+        top: 0.7em;
+        z-index: 8;
+        color: #aee239; } }
   nav.bar strong {
     font-family: "Playfair Display"; }
   nav.bar.headroom--pinned, nav.bar.scrolled {
@@ -6020,6 +6029,16 @@ nav.menu {
     opacity: 0;
     -webkit-transition: all 0.3s linear;
             transition: all 0.3s linear; }
+  .reveal-modal .ref, .reveal-modal dialog {
+    position: absolute;
+    margin-left: 1em;
+    display: block;
+    bottom: 1em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #8c2318; }
+    .reveal-modal .ref:hover, .reveal-modal dialog {
+      padding-bottom: 3em; }
   .reveal-modal .job-desc, .reveal-modal dialog {
     padding-top: 2.75rem;
     display: table-cell;
@@ -6120,6 +6139,13 @@ section.profile {
   section.profile .table-cell {
     display: table-cell;
     vertical-align: bottom; }
+  section.profile svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    section.profile svg polygon {
+      fill: red; }
   section.profile .me {
     padding-bottom: 2.75rem;
     background: rgba(0, 0, 0, 0.7);
@@ -6170,6 +6196,7 @@ section.intro {
   background-color: #aee239;
   margin-bottom: 5em;
   position: relative;
+  z-index: 9;
   font-family: "Playfair Display"; }
   section.intro:after {
     content: "";
@@ -6221,6 +6248,15 @@ section.employment .band, section.education .band {
 
 section.education h4 {
   font-size: 0.8em; }
+
+section.employment .job {
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1); }
+  section.employment .job:hover {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02); }
 
 @media only screen and (min-width:64.063em) {
   section.skills {

@@ -36,14 +36,10 @@ angular.module('harley.services', [])
 				company: "Marketing Partners",
 				title: "Digital & Print Designer, Front-end Developer",
 				when: "April 2013 - present",
-				desc: "Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. \
-						Whilst working there, I was in charge of all clients' design (both digital and print), as well as their websites, digital products, and marketing campaign collateral. \
-						At Marketing Partners, I learnt how to build websites to sell and convert, as well as have the best possible user experience. \
+				desc: "Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. <br>\
+						Whilst working there, I was in charge of all clients' design (both digital and print), as well as their websites, digital products, and marketing campaign collateral. <br>\
+						At Marketing Partners, I learnt how to build websites to sell and convert, as well as have the best possible user experience. <br>\
 						Working here also gave me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.",
-				ref: {
-					name: "Kristen Holden",
-					url: "http://www.linkedin.com/profile/view?id=68929789"
-				}
 			},
 			{
 				company: "Incsub",
@@ -104,7 +100,7 @@ angular.module('harley.services', [])
 			{
 				company: "Wopr",
 				title: "Web Designer",
-				when: "September 2008 - December 2008",
+				when: "Early days",
 				desc: "Wopr were a small, local design & dev shop based in Sydney. \
 						I did all the experience and visual design for their clients' websites.",
 				ref: {
