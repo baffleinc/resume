@@ -2,8 +2,8 @@
 
 angular.module('harley.controllers', [])
 
-.controller('MainController', ['$scope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education', 'parallaxHelper',
-	function($scope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education, parallaxHelper){
+.controller('MainController', ['$scope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education',
+	function($scope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education){
 
 	// FILL SCOPE WITH MY AWESOMENESS //
 	$scope.points = Proof.points;

@@ -73,9 +73,13 @@ nav.bar{
 
 
 
-	transform: translate3d(0, rem-calc(44px), 0);
-	-webkit-transform: translate3d(0, rem-calc(44px), 0);
-	opacity: 0;
+	// transform: translate3d(0, rem-calc(44px), 0);
+	// -webkit-transform: translate3d(0, rem-calc(44px), 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+
+	// opacity: 0;
+	opacity: 1;
 	transition: all .5s $easeOutExpo;
 	-webkit-transition: all 1s $easeOutExpo;
 	
@@ -128,13 +132,13 @@ nav.bar{
 		-webkit-transform: translate3d(0, 0, 0);
 	}
 
-	&.headroom--unpinned{
-		transform: translate3d(0, rem-calc(44px), 0);
-	}
+	// &.headroom--unpinned{
+	// 	transform: translate3d(0, rem-calc(44px), 0);
+	// }
 
-	&.headroom--top{
-		opacity: 0;
-	}
+	// &.headroom--top{
+	// 	opacity: 0;
+	// }
 
 	&.headroom-not-top,
 	&.visible{
@@ -151,7 +155,7 @@ nav.bar{
 	display: block;
 	width: 100%;
 
-	position: absolute;
+	position: fixed;
 
 	z-index: 99;
 	left: 0;
@@ -308,15 +312,11 @@ nav.menu{
 	}
 
 	.ref{
-			position: fixed;
+		clear: both;
 			padding-left: 1em;
 			display: block;
 			text-transform: uppercase;
-			background: #fff;
 			padding-bottom: 1em;
-			left: 0;
-			right: 0;
-			bottom: 0;
 			font-size: .8em;
 			color: $red;
 
@@ -344,8 +344,18 @@ nav.menu{
 	.job-work{
 		padding: 1em;
 		img{
-			max-width: rem-calc(300px);
+			max-width: 100%;
+
+			@media #{$large-up}{
+				max-width: rem-calc(400px);
+			}
 		}
+
+		
+
+			h3{
+				text-align: center;
+			}
 
 		.work{
 			float: left;
@@ -460,8 +470,9 @@ section.profile{
   display: table;
 
   .table-cell{
+  	text-align: center;
   	display: table-cell;
-  	vertical-align: bottom;
+  	vertical-align: middle;
   }
 
   svg{
@@ -495,6 +506,9 @@ section.profile{
 			font-size: rem-calc(50px);
 			line-height: 1;
 			text-transform: uppercase;
+
+			transform: rotate(-10deg) skewX(-10deg);
+			padding-bottom: rem-calc(30px);
 		}
 
 		h1,
@@ -625,7 +639,6 @@ section.employment{
 		cursor: pointer;
 		transition: all .3s $easeOutExpo;
 		position: relative;
-		padding-right: rem-calc(100px);
 
 		&:hover{
 			transform: scale(1.02);
@@ -661,7 +674,7 @@ section.skills{
 	ul {
 		li{
 
-			
+			cursor: default;
 
 			font-size: 1.2em;
 			margin: 0;

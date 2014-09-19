@@ -12,8 +12,9 @@
 
 <div class="job-work">
 	<div ng-repeat="work in job.work" ng-click="openWork(work.link)" class="work">
+		<hr>
+		<h3>{{ work.title }}</h3>
 		<img ng-show="work.img" src="images/work/{{ work.img }}" alt="">
-		<p>{{ work.title }}</p>
 	</div>
 </div>
 

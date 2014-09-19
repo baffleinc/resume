@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('harley', [
-	'duScroll',
-	'duParallax',
 	'ngTouch',
-	'headroom',
+	'duScroll',
 	'mm.foundation',
 	'ngAnimate',
 	'harley.controllers',

@@ -5837,9 +5837,9 @@ nav.bar {
   left: 0;
   right: 0;
   z-index: 99;
-  transform: translate3d(0, 2.75rem, 0);
-  -webkit-transform: translate3d(0, 2.75rem, 0);
-  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   height: 2.75rem;
@@ -5875,11 +5875,6 @@ nav.bar {
   nav.bar.headroom--pinned, nav.bar.scrolled {
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0); }
-  nav.bar.headroom--unpinned {
-    -webkit-transform: translate3d(0, 2.75rem, 0);
-            transform: translate3d(0, 2.75rem, 0); }
-  nav.bar.headroom--top {
-    opacity: 0; }
   nav.bar.headroom-not-top, nav.bar.visible {
     opacity: 1; }
   nav.bar .fa {
@@ -5889,7 +5884,7 @@ nav.bar {
 .close-button {
   display: block;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   left: 0;
   top: 0;
@@ -6033,15 +6028,11 @@ nav.menu {
     -webkit-transition: all 0.3s linear;
             transition: all 0.3s linear; }
   .reveal-modal .ref, .reveal-modal dialog {
-    position: fixed;
+    clear: both;
     padding-left: 1em;
     display: block;
     text-transform: uppercase;
-    background: #fff;
     padding-bottom: 1em;
-    left: 0;
-    right: 0;
-    bottom: 0;
     font-size: 0.8em;
     color: #8c2318; }
     .reveal-modal .ref:hover, .reveal-modal dialog {
@@ -6055,7 +6046,12 @@ nav.menu {
   .reveal-modal .job-work, .reveal-modal dialog {
     padding: 1em; }
     .reveal-modal .job-work img, .reveal-modal .job-work dialog {
-      max-width: 18.75rem; }
+      max-width: 100%; }
+      @media only screen and (min-width:64.063em) {
+        .reveal-modal .job-work img {
+          max-width: 25rem; } }
+    .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
+      text-align: center; }
     .reveal-modal .job-work .work, .reveal-modal .job-work dialog {
       float: left; }
   .reveal-modal .hamburger-cross-button, .reveal-modal dialog {
@@ -6150,8 +6146,9 @@ section.profile {
   background-size: cover;
   display: table; }
   section.profile .table-cell {
+    text-align: center;
     display: table-cell;
-    vertical-align: bottom; }
+    vertical-align: middle; }
   section.profile svg {
     position: absolute;
     bottom: 0;
@@ -6170,7 +6167,11 @@ section.profile {
       font-family: "Raleway";
       font-size: 3.125rem;
       line-height: 1;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-transform: rotate(-10deg) skewX(-10deg);
+          -ms-transform: rotate(-10deg) skewX(-10deg);
+              transform: rotate(-10deg) skewX(-10deg);
+      padding-bottom: 1.875rem; }
     section.profile .me h1, section.profile .me p, section.profile .me em {
       color: #fff;
       font-family: "Playfair Display";
@@ -6260,8 +6261,7 @@ section.employment .job {
   cursor: pointer;
   -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
           transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  position: relative;
-  padding-right: 6.25rem; }
+  position: relative; }
   section.employment .job:hover {
     -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
@@ -6283,6 +6283,7 @@ section.employment .job {
   section.skills {
     padding: 5em 0; } }
 section.skills ul li {
+  cursor: default;
   font-size: 1.2em;
   margin: 0;
   display: inline-block;

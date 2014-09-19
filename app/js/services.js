@@ -6,24 +6,27 @@ angular.module('harley.services', [])
 	return {
 		points: [
 			{
-				title: "Empathy for everyone",
-				desc: "Having worked on all sorts of projects, I have a solid understanding of how the average user thinks and works, and their needs. I apply this to everything I design and build, combined with killer marketing &amp; conversion tactics."
+				title: "UX Skills to go",
+				desc: "Having worked on all sorts of projects, I have a solid understanding of how the average user thinks, needs and works. \
+							I apply this to everything I design and build. I combine this with killer marketing &amp; conversion tactics, to create great interfaces for everyone."
 			},
 			{
 				title: "Design Chops",
-				desc: "In regards to design, I have a brain wired for design thinking, problem solving and aesthetics. In regards to tools, I have worked with Photoshop, Illustrator and Indesign for the entirety of my career. I also have a solid understanding of beautiful typography."
+				desc: "I have a brain wired for design thinking, problem solving and aesthetics. I have worked closely with Photoshop, Illustrator and Indesign for the entirety of my career. I also have a solid understanding of beautiful typography."
 			},
 			{
 				title: "Technical Wisdom",
-				desc: "I very quickly realised at the ripe age of 14, that I needed to learn how to build my web designs in order to understand them better - and make something of them! I've self taught my whole life, constantly upskilling. My strengths are in Front-end javascript (AngularJS, jQuery), HTML & CSS, as well as killer WordPress skills. Check out my full list of skills."
+				desc: "I have been constantly teaching myself new tricks since I was 14 - when I developed my first website. \
+								Since then, I have upskilled to include an enourmous range of languages and frameworks. Angular.js is my bae, however I am well equipped with the staples: HTML5, CSS3, Javascript, WordPress, PHP and a myriad of smaller frameworks. \
+								I use tools like Git & Grunt to make my life that little bit easier. "
 			},
 			{
 				title: "The Mind of a Marketer",
-				desc: "Having worked in a fast-paced marketing agency, everything I build has lead generation & conversion in mind. Landing pages, Email campaigns, CRM integration, SEO & SEM campaigns, and so on. Marketing Partners, my current employer, lives & breathes digital marketing strategy."
+				desc: "Having worked in a fast-paced marketing agency, everything I build has lead generation & conversion in mind. Landing pages, Email campaigns, CRM integration, SEO, and so on. Marketing Partners, my current employer, lives & breathes digital marketing strategy for Australian Startups."
 			},
 			{
 				title: "Communication Skills",
-				desc: "Having worked directly with clients, teams, stakeholders & directors, my communication skills are second to none. I am good at project management, and thoroughly understand and live agile methodologies / iterative development."
+				desc: "Having worked directly with clients, teams, stakeholders &amp; directors, my communication skills are second to none. I am good at project management, and thoroughly understand and live agile methodologies / iterative development."
 			}
 		]
 	}
@@ -111,7 +114,8 @@ angular.module('harley.services', [])
 					},
 					{
 						title: 'Internal Products',
-						desc: 'Unfortunately not all internal products made it to the press. I worked on a user testing service named earl.io, as well as a content aggreator product named "The Wall".'
+						desc: 'Unfortunately not all internal products made it to the press. I worked on a user testing service named earl.io, as well as a content aggreator product named "The Wall".',
+						img: 'none.png'
 					},
 					{
 						title: "SitePoint Logo Redesign",
@@ -124,12 +128,13 @@ angular.module('harley.services', [])
 			{
 				company: "Freelancing",
 				title: "Web Designer & Developer",
-				when: "January 2011 - October 2013",
-				desc: "Lahznimmo are an award winning architecture firm based in Sydney. \
-						I was hired as their in-house online expert, and worked with them to create an education focussed online presence to match their reputation.",
-				ref: {
-					name: "Available on request"
-				},
+				when: "January 2010 - October 2013",
+				desc: "For several years, I worked on a large variety of projects. My best work started around 2010, and below you will find a handful of sites I planned, designed, and built.",
+				ref: [
+					{
+						name: "Available on request"
+					}
+				],
 				workTitle: 'A sample of my freelance work',
 				work: [
 					{
