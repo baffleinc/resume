@@ -42,7 +42,9 @@
     <section class="intro" id="intro">
       <div class="row">
         <div class="small-12 columns">
-          <p class="text-center">Hey, I'm Harley. I'm a 21 year old digital &amp; print designer / front-end developer. I have a passion for creating digital products and excellent user experiences. Recently, I've fallen in love with mobile. I've been designing and building the web for 7 years, on an enourmous range of projects. My skillset is vast, and I am looking to focus my career down the path of product design.</p>
+          <p class="text-center">
+
+            What's up, I'm Harley! I'm a hybrid designer-developer with a focus on user experience, based in Melbourne. I love creating a seamless experience with a gorgeous design. I've been doing so for around seven years, on a range of projects. For the past three years, I've worked with some of Australia's leading startups and working on their digital products. I also have marketing experience. I want to focus my career down the path of product design.
         </div>
       </div>
     </section>
@@ -51,14 +53,14 @@
       <div class="row">
         <h2 class="small-12 columns">Employment History</h2>
       </div>
-      <div ng-repeat="job in employment" ng-click="showJob(job)" class="band row {{ slug(job.company) }}">
+      <div ng-repeat="job in employment" ng-click="showJob(job)" class="job band row {{ slug(job.company) }}">
         <div class="small-12 columns">
           <p class="pre-title">{{ job.company }}</p>
           <h3>{{ job.title }}</h3>
           <h4>{{ job.when }}</h4>
-          <a class="info-button">more <i class="fa fa-chevron-right"></i></a>
         </div>
-        
+    
+          <a class="info-button"><i class="fa fa-share-square-o"></i></a>
       </div>
 
     </section>

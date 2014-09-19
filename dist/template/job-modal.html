@@ -4,10 +4,19 @@
 		<h3>{{ job.company }}</h3>
 		<h2>{{ job.title }}</h2>
 		<p>{{ job.when }}</p>
-		<div class="desc">
+		<div class="desc" ng-bind-html-unsafe="job.desc">
 			{{ job.desc }}
 		</div>
 	</div>
 </div>
+
+<div class="job-work">
+	<div ng-repeat="work in job.work" ng-click="openWork(work.link)" class="work">
+		<img ng-show="work.img" src="images/work/{{ work.img }}" alt="">
+		<p>{{ work.title }}</p>
+	</div>
+</div>
+
+<span class="ref">ref: <a ng-repeat="ref in job.ref" href="{{ ref.link }}">{{ ref.name }} &bull;</a></span> 
 
 <!-- <a hamburger-button open="true" callback="$close()"></a> -->
