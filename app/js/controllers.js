@@ -37,7 +37,7 @@ angular.module('harley.controllers', [])
 	// OPEN THE MENU //
 	$scope.openMenu = function(){
 		$modal.open({
-			templateUrl: '/template/menu-popup.html',
+			templateUrl: 'template/menu-popup.html',
 			controller: function($scope){
 				// COOL SCROLLY STUFF //
 				$scope.goTo = function(section){
