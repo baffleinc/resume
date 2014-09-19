@@ -31,32 +31,32 @@ angular.module('harley.directives', [])
 			});
 		}
 	}
-})
-
-.directive('navMenu', function($modal, $document){
-	return {
-		restrict: 'E',
-		replace: true,
-		templateUrl: '/template/nav-menu.html',
-		link: function(scope, el, attrs){
-
-			// TO THE TOP PLS! //
-			scope.toTheTop = function(){ $document.scrollTo(0, 0, 1000); }
-
-			// OPEN THE MENU //
-			scope.openMenu = function(){
-				$modal.open({
-					templateUrl: '/template/menu-popup.html',
-					controller: function($scope){
-						// COOL SCROLLY STUFF //
-						$scope.goTo = function(section){
-							$scope.$close();
-							var target = angular.element(document.getElementById(section));
-							$document.scrollTo(target, 0, 1000, function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t });
-						};
-					}
-				});
-			};
-		}
-	};
 });
+
+// .directive('navMenu', function($modal, $document){
+// 	return {
+// 		restrict: 'E',
+// 		replace: true,
+// 		templateUrl: '/template/nav-menu.html',
+// 		link: function(scope, el, attrs){
+
+// 			// TO THE TOP PLS! //
+// 			scope.toTheTop = function(){ $document.scrollTo(0, 0, 1000); }
+
+// 			// OPEN THE MENU //
+// 			scope.openMenu = function(){
+// 				$modal.open({
+// 					templateUrl: '/template/menu-popup.html',
+// 					controller: function($scope){
+// 						// COOL SCROLLY STUFF //
+// 						$scope.goTo = function(section){
+// 							$scope.$close();
+// 							var target = angular.element(document.getElementById(section));
+// 							$document.scrollTo(target, 0, 1000, function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t });
+// 						};
+// 					}
+// 				});
+// 			};
+// 		}
+// 	};
+// });

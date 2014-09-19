@@ -20,7 +20,28 @@
   </head>
   <body ng-controller="MainController">
 
-    <nav-menu></nav-menu>
+    <!-- <nav-menu></nav-menu> -->
+
+    <nav class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
+      <a ng-click="openMenu()" class="fa fa-bars show-for-large-up desktop-menu-button"></a>
+      <div class="row">
+        <div class="small-12 columns">
+          <strong>Harley Alexander</strong>
+          <span class="right hide-for-large-up">
+            <!-- <a ng-click="toTheTop()" class="fa fa-chevron-up"></a> -->
+            <a href="tel:+61422808381" class="fa fa-phone"></a>
+            <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
+            <!-- <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a> -->
+            <a ng-click="openMenu()" class="fa fa-bars"></a>
+          </span>
+
+          <span class="right show-for-large-up info">
+            <a href="mailto:harley@baffleinc.com"><i class="fa fa-envelope"></i></a> &bull; 
+            0422 808 381
+          </span>
+        </div>
+      </div>
+    </nav>
 
     <section class="profile" id="profile">
       <div class="contact">
@@ -140,9 +161,11 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
+    <script src="bower_components/angular-parallax/scripts/angular-parallax.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
