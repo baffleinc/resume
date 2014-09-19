@@ -7,7 +7,7 @@ angular.module('harley.services', [])
 		points: [
 			{
 				title: "Empathy for everyone",
-				desc: "Having worked on all sorts of projects, I have a solid understanding of how the average user thinks and works, and their needs. I apply this to everything I design and build, combined with killer marketing & conversion tactics."
+				desc: "Having worked on all sorts of projects, I have a solid understanding of how the average user thinks and works, and their needs. I apply this to everything I design and build, combined with killer marketing &amp; conversion tactics."
 			},
 			{
 				title: "Design Chops",
@@ -40,6 +40,29 @@ angular.module('harley.services', [])
 						Whilst working there, I was in charge of all clients' design (both digital and print), as well as their websites, digital products, and marketing campaign collateral. <br>\
 						At Marketing Partners, I learnt how to build websites to sell and convert, as well as have the best possible user experience. <br>\
 						Working here also gave me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.",
+				ref: [
+					{
+						name: "I still work here - that would be awkward!"
+					}
+				],
+				work: [
+					{
+						title: "health.com.au Redesign",
+						desc: "MVP Currently in development. Click for a run through of the process.",
+						img: 'new-health-mobile.png'
+					},
+					{
+						title: "Uncomplexicate.com.au Marketing Campaign",
+						desc: "Working in an Agile environment, we are all about iterative deployment. So we set a road map from MVP to completed design.",
+						img: 'uncomplexicate-mobile.png'
+					},
+					{
+						title: "health.com.au Website",
+						desc : "",
+						img: 'health-mobile.png',
+					}
+
+				]
 			},
 			{
 				company: "Incsub",
@@ -47,10 +70,21 @@ angular.module('harley.services', [])
 				when: "February 2013 - April 2013",
 				desc: "Incsub love all things WordPress. \
 						I was an in-house author for their popular blog, wpmudev.org - and educated the masses on how to be better WordPress designers and developers.",
-				ref: {
-					name: "James Farmer",
-					url: "http://www.linkedin.com/profile/view?id=23995"
-				}
+				ref: [
+					{
+						name: "James Farmer",
+						url: "http://www.linkedin.com/profile/view?id=23995"
+					},
+				], 
+				workTitle: 'My work as an "Epic Wordsmith"',
+				work: [
+					{
+						title: 'WPMUDEV articles',
+						link: 'http://premium.wpmudev.org/blog/author/harleya/',
+						img: 'incsub.png'
+	
+					}
+				]
 			},
 			{
 				company: "SitePoint",
@@ -58,21 +92,71 @@ angular.module('harley.services', [])
 				when: "October 2011 - February 2013",
 				desc: "SitePoint is one of the largest online communities of web professionals. \
 						Here, I designed & built a variety of internal products, as well as building and maintaining their network of websites totalling over one million subscribers.",
-				ref: {
-					name: "Mark Harbottle",
-					url: "http://www.linkedin.com/profile/view?id=2372794"
-				}
+				ref: [
+					{
+						name: "Mark Harbottle",
+						url: "http://www.linkedin.com/profile/view?id=2372794"
+					},
+					{
+						name: "Jude Aakjaer",
+						url: "http://www.linkedin.com/profile/view?id=125732372"
+					}
+				],
+
+				work: [
+					{
+						title: "SitePoint Redesign",
+						link: 'http://sitepoint.com/',
+						img: 'sitepoint-mobile.png'
+					},
+					{
+						title: 'Internal Products',
+						desc: 'Unfortunately not all internal products made it to the press. I worked on a user testing service named earl.io, as well as a content aggreator product named "The Wall".'
+					},
+					{
+						title: "SitePoint Logo Redesign",
+						desc: "A short case study on the sitepoint logo redesign!",
+						link: 'http://www.sitepoint.com/sitepoints-new-logo-and-the-story-behind-it/',
+						img: 'sitepoint-logo.png'
+					},
+				]
 			},
 			{
-				company: "Lahznimmo Architects",
+				company: "Freelancing",
 				title: "Web Designer & Developer",
-				when: "January 2011 - July 2011",
+				when: "January 2011 - October 2013",
 				desc: "Lahznimmo are an award winning architecture firm based in Sydney. \
 						I was hired as their in-house online expert, and worked with them to create an education focussed online presence to match their reputation.",
 				ref: {
-					name: "Annabel Lahz",
-					url: "http://www.linkedin.com/profile/view?id=89860373"
-				}
+					name: "Available on request"
+				},
+				workTitle: 'A sample of my freelance work',
+				work: [
+					{
+						title: "Lighting Partners Australia desktop & mobile site",
+						desc: "I worked closely with LPAust to bring their online presence into the 21st century, with a clean, modern and responsive website.",
+						link: 'http://lpaust.com.au',
+						img: 'lpaust-mobile.png'
+					},
+					{
+						title: "Lahznimmo.com desktop & mobile site",
+						desc: "Lahznimmo Architects is a leading Australian Architecture firm based in Newtown, Sydney. I initially redesigned their website for them, working closely with the team",
+						url: 'http://lahznimmo.com',
+						img: 'lahznimmo-mobile.png'
+					},
+					{
+						title: "Moments of Spur desktop & mobile site",
+						desc: "Moments of Spur was a custom designed fashion blog for Melbourne Blogger Shalini Papas.",
+						url: 'http://momentsofspur.com',
+						img: 'mos-mobile.png'
+					},
+					{
+						title: "Arcadia Landscape Architects desktop & mobile site",
+						desc: "ArcadiaLA were in need of a serious modernisation. I worked with them to bring their projects online in a gorgeous portfolio.",
+						link: 'http://arcadiala.com.au',
+						img: 'arcadia-mobile.png'
+					}
+				]
 			},
 			{
 				company: "Envato",
@@ -81,10 +165,27 @@ angular.module('harley.services', [])
 				desc: "Envato is a network of sites and services aimed at helping people be creative. \
 						Whilst working for Envato, I wrote over 20 articles about front-end design and WordPress. \
 						I also co-authored a WordPress Design book with Envato founder Collis Ta'eed at the tender age of 14!",
-				ref: {
-					name: "Naysan Naraqi",
-					url: "http://www.linkedin.com/profile/view?id=137398368"
-				}
+				ref: [
+					{
+						name: "Naysan Naraqi",
+						url: "http://www.linkedin.com/profile/view?id=137398368"
+					},
+				],
+				workTitle: "A selection of my publications",
+				work: [
+					{
+						title: 'How to Be a Rockstar WordPress Designer',
+						desc : 'At 14, I co-authored the Envato best-seller with Collis Ta\'eed, writing the design & code chapters of the book.',
+						img  : 'rockable-wordpress-designer.png',
+						link : 'http://code.tutsplus.com/ebooks/rockstar-wordpress-designer'
+					},
+					{
+						title: 'Articles on Tuts+',
+						desc: 'I wrote bi-monthly articles for Nettuts - teaching myself to code along the way! Check em out.',
+						link: 'http://tutsplus.com/authors/harley-alexander',
+						img: 'tutsplus.png'
+					}
+				]
 			},
 			{
 				company: "WordCamp AU & NZ",
@@ -92,10 +193,12 @@ angular.module('harley.services', [])
 				when: "2008 & 2009",
 				desc: "WordCamp is a conference that focuses on everything WordPress. \
 						I was a speaker at three WordCamps over the course of 2008 and 2009 - when I was 14!",
-				ref: {
-					name: "Anthony Cole",
-					url: "http://www.linkedin.com/profile/view?id=114534997"
-				}
+				ref:[
+					{
+						name: "Anthony Cole",
+						url: "http://www.linkedin.com/profile/view?id=114534997"
+					}
+				] 
 			},
 			{
 				company: "Wopr",
@@ -103,10 +206,12 @@ angular.module('harley.services', [])
 				when: "Early days",
 				desc: "Wopr were a small, local design & dev shop based in Sydney. \
 						I did all the experience and visual design for their clients' websites.",
-				ref: {
-					name: "Sam Bauers",
-					url: "http://www.linkedin.com/profile/view?id=7263767"
-				}
+				ref:[
+					{
+						name: "Sam Bauers",
+						url: "http://www.linkedin.com/profile/view?id=7263767"
+					}
+				] 
 			}
 		]
 	}

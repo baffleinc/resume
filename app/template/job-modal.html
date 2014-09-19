@@ -10,6 +10,13 @@
 	</div>
 </div>
 
-<a href="{{ job.ref.link }}" class="ref">ref: {{ job.ref.name }}</a>
+<div class="job-work">
+	<div ng-repeat="work in job.work" ng-click="openWork(work.link)" class="work">
+		<img ng-show="work.img" src="images/work/{{ work.img }}" alt="">
+		<p>{{ work.title }}</p>
+	</div>
+</div>
+
+<span class="ref">ref: <a ng-repeat="ref in job.ref" href="{{ ref.link }}">{{ ref.name }} &bull;</a></span> 
 
 <!-- <a hamburger-button open="true" callback="$close()"></a> -->

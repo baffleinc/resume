@@ -62,6 +62,9 @@ angular.module('harley.controllers', [])
 
 .controller('JobModalController', ['$scope', 'Job', function($scope, Job){
 	$scope.job = Job;
+	$scope.openWork = function(link){
+		if(link !== "") window.open(link,'_blank');
+	}
 }]);
 
 

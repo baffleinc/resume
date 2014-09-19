@@ -308,11 +308,15 @@ nav.menu{
 	}
 
 	.ref{
-			position: absolute;
-			margin-left: 1em;
+			position: fixed;
+			padding-left: 1em;
 			display: block;
-			bottom: 1em;
 			text-transform: uppercase;
+			background: #fff;
+			padding-bottom: 1em;
+			left: 0;
+			right: 0;
+			bottom: 0;
 			font-size: .8em;
 			color: $red;
 
@@ -334,6 +338,17 @@ nav.menu{
 
 		h3{
 
+		}
+	}
+
+	.job-work{
+		padding: 1em;
+		img{
+			max-width: rem-calc(300px);
+		}
+
+		.work{
+			float: left;
 		}
 	}
 
@@ -596,14 +611,6 @@ section.education{
 			font-size: 1em;
 			opacity: .5;
 		}
-
-		.info-button{
-			position: absolute;
-			right: 1em;
-			top: rem-calc(50%);
-			font-size: rem-calc(22px);
-			margin-top: rem-calc(-22px);
-		}
 	}
 }
 
@@ -616,11 +623,31 @@ section.education{
 section.employment{
 	.job{
 		cursor: pointer;
-
 		transition: all .3s $easeOutExpo;
+		position: relative;
+		padding-right: rem-calc(100px);
 
 		&:hover{
 			transform: scale(1.02);
+		}
+
+		.info-button{
+			background: $primary-color;
+			color: #fff;
+			position: absolute;
+			
+			width: 2em;
+			line-height: 2em;
+
+			display: block;
+
+			border-radius: 1em;
+
+			top: 50%;
+			margin-top: -1em;
+			
+			right: 1em;
+			text-align: center;
 		}
 	}
 }

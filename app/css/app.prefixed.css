@@ -6033,11 +6033,15 @@ nav.menu {
     -webkit-transition: all 0.3s linear;
             transition: all 0.3s linear; }
   .reveal-modal .ref, .reveal-modal dialog {
-    position: absolute;
-    margin-left: 1em;
+    position: fixed;
+    padding-left: 1em;
     display: block;
-    bottom: 1em;
     text-transform: uppercase;
+    background: #fff;
+    padding-bottom: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
     font-size: 0.8em;
     color: #8c2318; }
     .reveal-modal .ref:hover, .reveal-modal dialog {
@@ -6048,6 +6052,12 @@ nav.menu {
     vertical-align: middle; }
     .reveal-modal .job-desc h2, .reveal-modal .job-desc dialog {
       font-family: "Playfair Display"; }
+  .reveal-modal .job-work, .reveal-modal dialog {
+    padding: 1em; }
+    .reveal-modal .job-work img, .reveal-modal .job-work dialog {
+      max-width: 18.75rem; }
+    .reveal-modal .job-work .work, .reveal-modal .job-work dialog {
+      float: left; }
   .reveal-modal .hamburger-cross-button, .reveal-modal dialog {
     position: absolute;
     top: -1em;
@@ -6242,12 +6252,6 @@ section.employment .band, section.education .band {
   section.employment .band h4, section.education .band h4 {
     font-size: 1em;
     opacity: 0.5; }
-  section.employment .band .info-button, section.education .band .info-button {
-    position: absolute;
-    right: 1em;
-    top: 3.125rem;
-    font-size: 1.375rem;
-    margin-top: -1.375rem; }
 
 section.education h4 {
   font-size: 0.8em; }
@@ -6255,11 +6259,25 @@ section.education h4 {
 section.employment .job {
   cursor: pointer;
   -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-          transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1); }
+          transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
+  padding-right: 6.25rem; }
   section.employment .job:hover {
     -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
             transform: scale(1.02); }
+  section.employment .job .info-button {
+    background: #00a8c6;
+    color: #fff;
+    position: absolute;
+    width: 2em;
+    line-height: 2em;
+    display: block;
+    border-radius: 1em;
+    top: 50%;
+    margin-top: -1em;
+    right: 1em;
+    text-align: center; }
 
 @media only screen and (min-width:64.063em) {
   section.skills {
