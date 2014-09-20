@@ -23,6 +23,8 @@ angular.module('harley.controllers', [])
 		$modal.open({
 			templateUrl: 'template/job-modal.html',
 			controller: 'JobModalController',
+			showControls: true,
+			windowClass: 'job',
 			resolve: {
 				Job: function(){
 					return object;
@@ -38,7 +40,9 @@ angular.module('harley.controllers', [])
 	$scope.openMenu = function(){
 		$modal.open({
 			templateUrl: 'template/menu-popup.html',
+			showControls: false,
 			controller: function($scope){
+
 				// COOL SCROLLY STUFF //
 				$scope.goTo = function(section){
 					$scope.$close();
@@ -78,10 +82,23 @@ angular.module('harley.controllers', [])
 
 }])
 
-.controller('JobModalController', ['$scope', 'Job', function($scope, Job){
+.controller('JobModalController', ['$scope', '$sce', 'Job', function($scope, $sce, Job){
 	$scope.job = Job;
+	$scope.windowClass = 'job';
+	$scope.showControls = true;
+
+	$scope.job.desc = $sce.trustAsHtml($scope.job.desc);
+
 	$scope.openWork = function(link){
 		if(link !== "") window.open(link,'_blank');
+	}
+
+	$scope.nextWork = function(){
+		
+	}
+
+	$scope.prevWork = function(){
+
 	}
 }]);
 

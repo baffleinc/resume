@@ -1,7 +1,8 @@
-<nav class="menu" ng-cloak>
-  <!-- <a ng-click="$close()" hamburger-button open="true"></a> -->
+<div class="modal-bar">
+      <a ng-click="$close()" class="close-button"><i class="fa fa-times fa-2x"></i></a>
+    </div>
 
-  <a ng-click="$close()" class="close-button"><i class="fa fa-times fa-2x"></i></a>
+<nav class="menu scroll" ng-cloak>
   <div class="row">
     <div class="small-12 columns">
       <ul class="no-bullet">
@@ -10,14 +11,14 @@
         <li><a ng-click="goTo('employment')">Work</a></li>
         <li><a ng-click="goTo('value')">Values</a></li>
         <li><a ng-click="goTo('skills')">Skills</a></li>
-        <li><a ng-click="goTo('education')">Learning</a></li>
+        <li><a ng-click="goTo('education')">Education</a></li>
         <li><a ng-click="goTo('contact')">Say hello!</a></li>
       </ul>
     </div>
   </div>
   <footer class="row">
     <div class="small-12 columns">
-      <p><img src="../images/logo.png" width="64px" height="64px" alt=""></p>
+      <p><img src="../images/logo.png" spinning-logo width="64px" height="64px" alt=""></p>
       <p><span class="right">&copy; Harley '14</span>
         <a href="tel:+61422808381" class="fa fa-phone"></a>
         <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>

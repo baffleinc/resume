@@ -7,26 +7,27 @@ angular.module('harley.services', [])
 		points: [
 			{
 				title: "UX Skills to go",
-				desc: "Having worked on all sorts of projects, I have a solid understanding of how the average user thinks, needs and works. \
-							I apply this to everything I design and build. I combine this with killer marketing &amp; conversion tactics, to create great interfaces for everyone."
+				desc: "Having worked on all sorts of projects, I have a solid understanding of user behaviour, as well as proven design patterns. \
+							I apply this to everything I design and build, combining it with killer marketing & conversion tactics. \
+							I also sketch & prototype all my interfaces, ensuring function comes before the design layer."
 			},
 			{
 				title: "Design Chops",
-				desc: "I have a brain wired for design thinking, problem solving and aesthetics. I have worked closely with Photoshop, Illustrator and Indesign for the entirety of my career. I also have a solid understanding of beautiful typography."
+				desc: "I have a brain wired for design thinking, problem solving and aesthetics. I have extensive experience with Photoshop, Illustrator and Indesign. I also have a solid understanding of beautiful typography."
 			},
 			{
 				title: "Technical Wisdom",
 				desc: "I have been constantly teaching myself new tricks since I was 14 - when I developed my first website. \
-								Since then, I have upskilled to include an enourmous range of languages and frameworks. Angular.js is my bae, however I am well equipped with the staples: HTML5, CSS3, Javascript, WordPress, PHP and a myriad of smaller frameworks. \
+								Since then, I have upskilled to include an enourmous range of languages and frameworks. Angular.js is what I am all about, however I am well equipped with the staples: HTML5, CSS3, Javascript, WordPress, PHP and a myriad of smaller frameworks. \
 								I use tools like Git & Grunt to make my life that little bit easier. "
 			},
 			{
 				title: "The Mind of a Marketer",
-				desc: "Having worked in a fast-paced marketing agency, everything I build has lead generation & conversion in mind. Landing pages, Email campaigns, CRM integration, SEO, and so on. Marketing Partners, my current employer, lives & breathes digital marketing strategy for Australian Startups."
+				desc: "Having worked in a fast-paced marketing agency, everything I build has lead generation & conversion in mind. Landing pages, email campaigns, CRM integration, SEO, and so on. Marketing Partners, my current employer, lives & breathes digital marketing strategy for Australian Startups."
 			},
 			{
 				title: "Communication Skills",
-				desc: "Having worked directly with clients, teams, stakeholders &amp; directors, my communication skills are second to none. I am good at project management, and thoroughly understand and live agile methodologies / iterative development."
+				desc: "Having worked directly with clients, teams, stakeholders & directors, my communication skills are second to none. I am good at project management, and thoroughly understand and live agile methodologies / iterative development."
 			}
 		]
 	}
@@ -40,12 +41,12 @@ angular.module('harley.services', [])
 				title: "Digital & Print Designer, Front-end Developer",
 				when: "April 2013 - present",
 				desc: "Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. <br>\
-						Whilst working there, I was in charge of all clients' design (both digital and print), as well as their websites, digital products, and marketing campaign collateral. <br>\
-						At Marketing Partners, I learnt how to build websites to sell and convert, as well as have the best possible user experience. <br>\
+						Whilst working there, I was in charge of all clients design (both digital and print), as well as their websites, digital products, and marketing campaign collateral. <br>\
+						At Marketing Partners, I learnt how to build websites that sell and convert, coupled with the best possible user experience. <br>\
 						Working here also gave me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.",
 				ref: [
 					{
-						name: "I still work here - that would be awkward!"
+						name: "Looking for a reference? I still work @ Marketing Partners, that could get awkward!"
 					}
 				],
 				work: [
@@ -72,7 +73,7 @@ angular.module('harley.services', [])
 				title: "Copywriting & Tech Journalism",
 				when: "February 2013 - April 2013",
 				desc: "Incsub love all things WordPress. \
-						I was an in-house author for their popular blog, wpmudev.org - and educated the masses on how to be better WordPress designers and developers.",
+						I was an in-house author for their popular blog, wpmudev.org - educating the masses on how to be better WordPress designers and developers.",
 				ref: [
 					{
 						name: "James Farmer",
@@ -166,8 +167,8 @@ angular.module('harley.services', [])
 			{
 				company: "Envato",
 				title: "Book & Magazine Author",
-				when: "Semptember 2008 - Semptember 2009",
-				desc: "Envato is a network of sites and services aimed at helping people be creative. \
+				when: "September 2008 - September 2009",
+				desc: "Envato is a network of sites and services aimed at helping people design & build creative websites. \
 						Whilst working for Envato, I wrote over 20 articles about front-end design and WordPress. \
 						I also co-authored a WordPress Design book with Envato founder Collis Ta'eed at the tender age of 14!",
 				ref: [
@@ -197,7 +198,7 @@ angular.module('harley.services', [])
 				title: "Speaker & Presenter",
 				when: "2008 & 2009",
 				desc: "WordCamp is a conference that focuses on everything WordPress. \
-						I was a speaker at three WordCamps over the course of 2008 and 2009 - when I was 14!",
+						I was a speaker at three WordCamps over the course of 2008 and 2009",
 				ref:[
 					{
 						name: "Anthony Cole",
@@ -242,7 +243,7 @@ angular.module('harley.services', [])
 			{
 				name: "Higher School Certificate",
 				location: "International Grammar School",
-				subtitle: "Design & Technology, Visual Arts, French, Spanish, English"
+				subtitle: "Design & Technology, Visual Arts, French, Spanish, English / Accepted for ArtExpress @ AGNSW"
 			}
 		]
 	}

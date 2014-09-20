@@ -5837,9 +5837,9 @@ nav.bar {
   left: 0;
   right: 0;
   z-index: 99;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  opacity: 1;
+  transform: translate3d(0, 2.75rem, 0);
+  -webkit-transform: translate3d(0, 2.75rem, 0);
+  opacity: 0;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   height: 2.75rem;
@@ -5852,7 +5852,7 @@ nav.bar {
       transform: translate3d(0, -5rem, 0);
       -webkit-transform: translate3d(0, -5rem, 0);
       opacity: 0;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: #fff;
       line-height: 5em;
       height: 5em; }
       nav.bar strong {
@@ -5881,22 +5881,29 @@ nav.bar {
     margin-right: 10px;
     font-size: 1.125rem; }
 
-.close-button {
+.reveal-modal.job .modal-bar .control, .reveal-modal.job .modal-bar dialog.job, .reveal-modal.job .close-button, .reveal-modal.job dialog.job {
   display: block;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: 0;
-  right: 0;
-  background-color: #aee239;
-  text-align: center;
-  line-height: 3rem; }
-  .close-button i {
-    color: #fff;
-    position: relative;
-    top: 0.25rem; }
-
+  width: 33% !important; }
+.reveal-modal .modal-bar .control, .reveal-modal .modal-bar dialog {
+  display: none; }
+.reveal-modal .modal-bar .close-button, .reveal-modal .modal-bar dialog {
+  width: 100%; }
+.reveal-modal .modal-bar .fa, .reveal-modal .modal-bar dialog {
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+.reveal-modal .modal-bar .fa-times, .reveal-modal .modal-bar dialog {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+.reveal-modal .modal-bar .fa-arrow-left, .reveal-modal .modal-bar dialog {
+  -webkit-transform: translateX(12px);
+      -ms-transform: translateX(12px);
+          transform: translateX(12px); }
+.reveal-modal .modal-bar .fa-arrow-right, .reveal-modal .modal-bar dialog {
+  -webkit-transform: translateX(-12px);
+      -ms-transform: translateX(-12px);
+          transform: translateX(-12px); }
 .reveal-modal .job-desc.columns > *, .reveal-modal .job-desc.columns > dialog {
   -webkit-transform: translateY(-1em);
       -ms-transform: translateY(-1em);
@@ -5931,11 +5938,16 @@ nav.bar {
   .reveal-modal.in li:nth-child(7), .reveal-modal.in dialog.in {
     -webkit-transition-delay: 0.45s;
             transition-delay: 0.45s; }
-.reveal-modal.in .fa-times, .reveal-modal.in dialog.in {
+.reveal-modal.in .modal-bar .fa, .reveal-modal.in .modal-bar dialog.in {
+  opacity: 1; }
+.reveal-modal.in .modal-bar .fa-times, .reveal-modal.in .modal-bar dialog.in {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  opacity: 1; }
+          transform: rotate(0deg); }
+.reveal-modal.in .modal-bar .fa-arrow-left, .reveal-modal.in .modal-bar dialog.in, .reveal-modal.in .modal-bar .fa-arrow-right, .reveal-modal.in .modal-bar dialog.in {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 nav.menu {
   position: fixed;
@@ -6015,28 +6027,57 @@ nav.menu {
 .reveal-modal, dialog {
   display: table;
   position: fixed;
+  background-color: #fff;
   top: 0;
   bottom: 0;
   right: 0;
-  left: 0;
-  overflow: auto; }
-  .reveal-modal .fa-times, .reveal-modal dialog {
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    opacity: 0;
-    -webkit-transition: all 0.3s linear;
-            transition: all 0.3s linear; }
+  left: 0; }
+  .reveal-modal .scroll, .reveal-modal dialog {
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 2.75rem; }
+  .reveal-modal .modal-bar, .reveal-modal dialog {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #aee239;
+    text-align: center;
+    line-height: 3rem; }
+    .reveal-modal .modal-bar > a, .reveal-modal .modal-bar > dialog {
+      display: block;
+      width: 33%;
+      float: left; }
+      .reveal-modal .modal-bar > a.previous-button, .reveal-modal .modal-bar > dialog {
+        text-align: left;
+        padding-left: 0.9375rem; }
+      .reveal-modal .modal-bar > a.next-button, .reveal-modal .modal-bar > dialog {
+        text-align: right;
+        padding-right: 0.9375rem; }
+    .reveal-modal .modal-bar i, .reveal-modal .modal-bar dialog {
+      color: #fff;
+      position: relative;
+      top: 0.25rem; }
   .reveal-modal .ref, .reveal-modal dialog {
     clear: both;
-    padding-left: 1em;
+    background-color: #404040;
+    padding-bottom: 3em;
+    padding: 1em;
     display: block;
     text-transform: uppercase;
     padding-bottom: 1em;
     font-size: 0.8em;
-    color: #8c2318; }
-    .reveal-modal .ref:hover, .reveal-modal dialog {
-      padding-bottom: 3em; }
+    color: #aee239; }
+    .reveal-modal .ref a, .reveal-modal .ref dialog {
+      color: #fff; }
   .reveal-modal .job-desc, .reveal-modal dialog {
     padding-top: 2.75rem;
     display: table-cell;
@@ -6044,16 +6085,47 @@ nav.menu {
     .reveal-modal .job-desc h2, .reveal-modal .job-desc dialog {
       font-family: "Playfair Display"; }
   .reveal-modal .job-work, .reveal-modal dialog {
-    padding: 1em; }
-    .reveal-modal .job-work img, .reveal-modal .job-work dialog {
-      max-width: 100%; }
-      @media only screen and (min-width:64.063em) {
-        .reveal-modal .job-work img {
-          max-width: 25rem; } }
-    .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
+    margin-top: 3em;
+    padding-top: 3em;
+    background-color: #eee; }
+    .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
+      font-family: "Playfair Display";
       text-align: center; }
-    .reveal-modal .job-work .work, .reveal-modal .job-work dialog {
-      float: left; }
+    .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
+      font-family: "Raleway";
+      text-align: center; }
+  @media only screen and (min-width:64.063em) {
+    .reveal-modal .job-work, .reveal-modal dialog {
+      padding: 1em;
+      width: 100%;
+      overflow-y: scroll;
+      background-color: #f8f8f8;
+      padding-top: 5em;
+      margin-top: 5em;
+      position: relative; }
+      .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
+        position: fixed;
+        top: 0;
+        left: 0; }
+      .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
+        font-family: "Playfair Display"; }
+      .reveal-modal .job-work .scroller, .reveal-modal .job-work dialog {
+        width: 5000em; }
+      .reveal-modal .job-work img, .reveal-modal .job-work dialog {
+        max-width: 280px; }
+        @media only screen and (min-width:64.063em) {
+          .reveal-modal .job-work img {
+            max-width: 25rem; } }
+      .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
+        font-family: "Raleway"; }
+      .reveal-modal .job-work .work, .reveal-modal .job-work dialog {
+        float: left;
+        max-width: 600px;
+        text-align: center;
+        border-right: 1px solid #eee;
+        padding: 2em 5em; }
+        .reveal-modal .job-work .work h3, .reveal-modal .job-work .work dialog {
+          min-height: 88px; } }
   .reveal-modal .hamburger-cross-button, .reveal-modal dialog {
     position: absolute;
     top: -1em;
@@ -6168,9 +6240,6 @@ section.profile {
       font-size: 3.125rem;
       line-height: 1;
       text-transform: uppercase;
-      -webkit-transform: rotate(-10deg) skewX(-10deg);
-          -ms-transform: rotate(-10deg) skewX(-10deg);
-              transform: rotate(-10deg) skewX(-10deg);
       padding-bottom: 1.875rem; }
     section.profile .me h1, section.profile .me p, section.profile .me em {
       color: #fff;

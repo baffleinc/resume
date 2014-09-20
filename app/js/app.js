@@ -5,6 +5,7 @@ angular.module('harley', [
 	'duScroll',
 	'mm.foundation',
 	'ngAnimate',
+	'angular-carousel',
 	'harley.controllers',
 	'harley.services',
 	'harley.directives'

@@ -73,13 +73,10 @@ nav.bar{
 
 
 
-	// transform: translate3d(0, rem-calc(44px), 0);
-	// -webkit-transform: translate3d(0, rem-calc(44px), 0);
-	transform: translate3d(0, 0, 0);
-	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, rem-calc(44px), 0);
+	-webkit-transform: translate3d(0, rem-calc(44px), 0);
 
-	// opacity: 0;
-	opacity: 1;
+	 opacity: 0;
 	transition: all .5s $easeOutExpo;
 	-webkit-transition: all 1s $easeOutExpo;
 	
@@ -94,7 +91,7 @@ nav.bar{
 		transform: translate3d(0, -5rem, 0);
 		-webkit-transform: translate3d(0, -5rem, 0);
 		opacity: 0;
-		background-color: rgba(255,255,255,.95);
+		background-color: #fff;
 		line-height: 5em;
 		height: 5em;
 
@@ -151,38 +148,54 @@ nav.bar{
 	}
 }
 
-.close-button{
-	display: block;
-	width: 100%;
-
-	position: fixed;
-
-	z-index: 99;
-	left: 0;
-	top: 0;
-	right: 0;
-
-	background-color: $green;
-	text-align: center;
-	line-height: rem-calc(48px);
-
-	i{
-		color: #fff;
-		position: relative;
-		top: rem-calc(4px);
-	}
-}
-
 // THIS IS FOR POST MODAL OPEN AWESOME SAUCE //
 
 .reveal-modal{
+
+	&.job{
+		.modal-bar .control,
+		.close-button{
+			display: block;
+			width: 33%!important;
+		}
+	}
+
+	.modal-bar{
+
+			.control{
+				display: none;
+			}
+
+			.close-button{
+				width: 100%;
+			}
+
+			.fa{
+				opacity: 0;
+				transition: all .3s linear;
+			}
+
+			.fa-times{
+				transform: rotate(-90deg);
+			}
+
+			.fa-arrow-left{
+				transform: translateX(12px);
+			}
+
+			.fa-arrow-right{
+				transform: translateX(-12px);
+			}
+
+		}
 
 	.job-desc.columns{
 		> * {
 			transform: translateY(-1em);
 			opacity: 0;
 		}
-		
+
+
 	}
 
 	&.in{
@@ -198,9 +211,19 @@ nav.bar{
 			}
 		}
 
-		.fa-times{
-			transform: rotate(0deg);
-			opacity: 1;
+		.modal-bar{
+			.fa{
+				opacity: 1;
+			}
+			
+			.fa-times{
+				transform: rotate(0deg);
+			}
+
+			.fa-arrow-left,
+			.fa-arrow-right{
+				transform: translateX(0);
+			}
 		}
 	}
 }
@@ -299,29 +322,76 @@ nav.menu{
 .reveal-modal{
 	display: table;
 	position: fixed;
+	background-color: #fff;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	overflow: auto;
 
-	.fa-times{
-		transform: rotate(-90deg);
-		opacity: 0;
-		transition: all .3s linear;
+	.scroll{
+		overflow: auto;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		left: 0;
+		height: 100%;
+		padding-top: rem-calc(44px);
 	}
+
+	.modal-bar{
+	display: block;
+	width: 100%;
+
+	position: fixed;
+
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	right: 0;
+
+	background-color: $green;
+	text-align: center;
+	line-height: rem-calc(48px);
+
+	> a{
+		display: block;
+		width: 33%;
+		float: left;
+
+		&.previous-button{
+			text-align: left;
+			padding-left: $column-gutter / 2;
+		}
+
+		&.next-button{
+			text-align: right;
+			padding-right: $column-gutter / 2;
+		}
+	}
+
+
+
+	i{
+		color: #fff;
+		position: relative;
+		top: rem-calc(4px);
+	}
+}
 
 	.ref{
 		clear: both;
-			padding-left: 1em;
+		background-color: #404040;
+		padding-bottom: 3em;
+			padding: 1em;
 			display: block;
 			text-transform: uppercase;
 			padding-bottom: 1em;
 			font-size: .8em;
-			color: $red;
+			color: $green;
 
-			&:hover{
-				padding-bottom: 3em;
+			a{
+				color: #fff;
 			}
 		}
 
@@ -342,9 +412,50 @@ nav.menu{
 	}
 
 	.job-work{
+
+		margin-top: 3em;
+		padding-top: 3em;
+		background-color: #eee;
+
+		h2{
+			font-family: "Playfair Display";
+			text-align: center;
+		}
+
+		h3{
+			font-family: "Raleway";
+			text-align: center;
+		}
+	}
+
+	@media #{$large-up}{
+		.job-work{
 		padding: 1em;
+
+		width: 100%;
+		overflow-y: scroll;
+
+		background-color: #f8f8f8;
+		padding-top: 5em;
+		margin-top: 5em;
+		position: relative;
+
+			h2{
+				position: fixed;
+				top: 0; 
+				left: 0;
+			}
+
+		h2{
+			font-family: "Playfair Display"
+		}
+
+		.scroller{
+			width: 5000em;
+		}
+
 		img{
-			max-width: 100%;
+			max-width: 280px;
 
 			@media #{$large-up}{
 				max-width: rem-calc(400px);
@@ -354,12 +465,22 @@ nav.menu{
 		
 
 			h3{
-				text-align: center;
+				font-family: "Raleway"
 			}
 
 		.work{
 			float: left;
+			max-width: 600px;
+			text-align: center;
+			border-right: 1px solid #eee;
+			padding: 2em 5em;
+
+
+			h3{
+				min-height: 88px;
+			}
 		}
+	}
 	}
 
 	.hamburger-cross-button{
@@ -507,7 +628,7 @@ section.profile{
 			line-height: 1;
 			text-transform: uppercase;
 
-			transform: rotate(-10deg) skewX(-10deg);
+			// transform: rotate(-10deg) skewX(-10deg);
 			padding-bottom: rem-calc(30px);
 		}
 
