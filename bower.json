@@ -10,6 +10,7 @@
     "ng-parallax": "~0.1.8",
     "angular-parallax": "*",
     "angular-touch": "~1.2.24",
-    "angular-carousel": "~0.2.5"
+    "angular-carousel": "~0.2.5",
+    "angular-flexslider": "~1.2.10"
   }
 }

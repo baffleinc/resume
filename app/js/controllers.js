@@ -94,13 +94,27 @@ angular.module('harley.controllers', [])
 	$scope.windowClass = 'job';
 	$scope.showControls = true;
 
-	// $scope.job.descSafe = $sce.trustAsHtml($scope.job.desc);
+	angular.forEach($scope.jobs, function(j){
+		j.descSafe = $sce.trustAsHtml(j.desc);
+	});
 
 	$scope.openWork = function(link){
 		if(link !== "") window.open(link,'_blank');
 	}
 
-	
+	$scope.prev = function(){
+		$scope.activeJob--;
+		if($scope.activeJob < 0) $scope.activeJob = $scope.jobs.length-1;
+		$scope.job = $scope.jobs[$scope.activeJob];
+	}
+
+	$scope.next = function(){
+		$scope.activeJob++;
+		if($scope.activeJob > $scope.jobs.length-1) $scope.activeJob = 0;
+		$scope.job = $scope.jobs[$scope.activeJob];
+	}
+
+
 }]);
 
 

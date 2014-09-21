@@ -127,8 +127,8 @@ angular.module('harley.services', [])
 				]
 			},
 			{
-				company: "Freelancing",
-				title: "Web Designer & Developer",
+				company: "Baffle! inc.",
+				title: "Freelance Designer & Developer",
 				when: "January 2010 - October 2013",
 				desc: "For several years, I worked on a large variety of projects. My best work started around 2010, and below you will find a handful of sites I planned, designed, and built.",
 				ref: [
