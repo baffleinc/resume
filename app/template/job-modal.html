@@ -26,14 +26,14 @@
 					<div class="clearfix"></div>
 					<div class="small-12 columns extra-info">
 						<p>{{ work.desc }}</p>
-						<a ng-show="work.link" ng-href="{{ work.link }}" target="_blank" class="button">See</a>
+						<a ng-show="work.link" ng-href="{{ work.link }}" target="_blank" class="small button"><i class="fa fa-square-share-o"> See</i></a>
 					</div>
 			</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 
-		<span class="ref">ref: <a ng-repeat="ref in job.ref" href="{{ ref.link }}">{{ ref.name }} &bull;</a></span> 
+		<span class="ref">reference: <a ng-repeat="ref in job.ref" href="{{ ref.link }}">{{ ref.name }} &bull;</a></span> 
 	</div>
 </div>
 

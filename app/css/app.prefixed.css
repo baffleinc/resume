@@ -5810,6 +5810,17 @@ th.hide-for-touch {
   to {
     -moz-transform: translate(0, -0px); } }
 
+.hover {
+  color: #fff;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out; }
+
 body, html {
   height: 100%;
   font-family: "Raleway";
@@ -5852,7 +5863,7 @@ nav.bar {
       transform: translate3d(0, -5rem, 0);
       -webkit-transform: translate3d(0, -5rem, 0);
       opacity: 0;
-      background-color: #fff;
+      background-color: #fdfcf7;
       line-height: 5em;
       height: 5em; }
       nav.bar strong {
@@ -5905,97 +5916,6 @@ nav.bar {
         right: 2.75rem; }
       nav.bar .fa.fa-phone {
         right: 5.5rem; } }
-
-.reveal-modal.job .modal-bar .control, .reveal-modal.job .modal-bar dialog.job, .reveal-modal.job .close-button, .reveal-modal.job dialog.job {
-  display: block;
-  width: 33% !important; }
-.reveal-modal .modal-bar .control, .reveal-modal .modal-bar dialog {
-  display: none; }
-.reveal-modal .modal-bar .close-button, .reveal-modal .modal-bar dialog {
-  width: 100%; }
-.reveal-modal .modal-bar .fa, .reveal-modal .modal-bar dialog {
-  opacity: 0;
-  -webkit-transition: all 0.3s linear;
-          transition: all 0.3s linear; }
-.reveal-modal .modal-bar .fa-times, .reveal-modal .modal-bar dialog {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg); }
-.reveal-modal .modal-bar .fa-arrow-left, .reveal-modal .modal-bar dialog {
-  -webkit-transform: translateX(12px);
-      -ms-transform: translateX(12px);
-          transform: translateX(12px); }
-.reveal-modal .modal-bar .fa-arrow-right, .reveal-modal .modal-bar dialog {
-  -webkit-transform: translateX(-12px);
-      -ms-transform: translateX(-12px);
-          transform: translateX(-12px); }
-.reveal-modal .job-desc.columns > *, .reveal-modal .job-desc.columns > dialog {
-  -webkit-transform: translateY(-1em);
-      -ms-transform: translateY(-1em);
-          transform: translateY(-1em);
-  opacity: 0; }
-.reveal-modal .aux, .reveal-modal dialog {
-  opacity: 0;
-  -webkit-transform: translateY(-2.75rem);
-      -ms-transform: translateY(-2.75rem);
-          transform: translateY(-2.75rem);
-  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-          transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s; }
-.reveal-modal.in .aux, .reveal-modal.in dialog.in {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0); }
-.reveal-modal.in li, .reveal-modal.in dialog.in {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1; }
-  .reveal-modal.in li:nth-child(0), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s; }
-  .reveal-modal.in li:nth-child(1), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s; }
-  .reveal-modal.in li:nth-child(2), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s; }
-  .reveal-modal.in li:nth-child(3), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.25s;
-            transition-delay: 0.25s; }
-  .reveal-modal.in li:nth-child(4), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s; }
-  .reveal-modal.in li:nth-child(5), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.35s;
-            transition-delay: 0.35s; }
-  .reveal-modal.in li:nth-child(6), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s; }
-  .reveal-modal.in li:nth-child(7), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.45s;
-            transition-delay: 0.45s; }
-  .reveal-modal.in li:nth-child(8), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.5s;
-            transition-delay: 0.5s; }
-  .reveal-modal.in li:nth-child(9), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.55s;
-            transition-delay: 0.55s; }
-  .reveal-modal.in li:nth-child(10), .reveal-modal.in dialog.in {
-    -webkit-transition-delay: 0.6s;
-            transition-delay: 0.6s; }
-.reveal-modal.in .modal-bar .fa, .reveal-modal.in .modal-bar dialog.in {
-  opacity: 1; }
-.reveal-modal.in .modal-bar .fa-times, .reveal-modal.in .modal-bar dialog.in {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg); }
-.reveal-modal.in .modal-bar .fa-arrow-left, .reveal-modal.in .modal-bar dialog.in, .reveal-modal.in .modal-bar .fa-arrow-right, .reveal-modal.in .modal-bar dialog.in {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0); }
 
 nav.menu {
   position: fixed;
@@ -6090,7 +6010,7 @@ nav.menu {
 .reveal-modal, dialog {
   display: table;
   position: fixed;
-  background-color: #fff;
+  background-color: #fdfcf7;
   top: 0;
   bottom: 0;
   right: 0;
@@ -6150,7 +6070,7 @@ nav.menu {
   .reveal-modal .job-work, .reveal-modal dialog {
     padding-top: 2em;
     padding-bottom: 2em;
-    background-color: #eee; }
+    background-color: #f5f2e9; }
     .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
       font-family: "Playfair Display";
       text-align: center; }
@@ -6161,7 +6081,7 @@ nav.menu {
     .reveal-modal .job-work, .reveal-modal dialog {
       padding: 1em;
       width: 100%;
-      background-color: #f8f8f8;
+      background-color: #f5f2e9;
       position: relative; }
       .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
         font-family: "Playfair Display";
@@ -6191,6 +6111,9 @@ nav.menu {
           margin: 0 auto;
           -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
                   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+        .reveal-modal .job-work .work .button, .reveal-modal .job-work .work dialog {
+          background-color: #aee239;
+          text-transform: uppercase; }
         .reveal-modal .job-work .work img, .reveal-modal .job-work .work dialog {
           -webkit-filter: blur(0);
                   filter: blur(0);
@@ -6205,61 +6128,6 @@ nav.menu {
     position: absolute;
     top: -1em;
     right: 1em; }
-
-.hamburger-cross-button {
-  width: 44px;
-  height: 45px;
-  position: relative;
-  margin: 50px auto;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 0.5s cubic-bezier(1, 0, 0, 1);
-          transition: 0.5s cubic-bezier(1, 0, 0, 1);
-  cursor: pointer; }
-  .hamburger-cross-button span {
-    display: block;
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background: #8c2318;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transition: 0.25s cubic-bezier(1, 0, 0, 1);
-            transition: 0.25s cubic-bezier(1, 0, 0, 1); }
-    .hamburger-cross-button span:nth-child(1) {
-      top: 0px;
-      -webkit-transform-origin: left center;
-          -ms-transform-origin: left center;
-              transform-origin: left center; }
-    .hamburger-cross-button span:nth-child(2) {
-      top: 18px;
-      -webkit-transform-origin: left center;
-          -ms-transform-origin: left center;
-              transform-origin: left center; }
-    .hamburger-cross-button span:nth-child(3) {
-      top: 36px;
-      -webkit-transform-origin: left center;
-          -ms-transform-origin: left center;
-              transform-origin: left center; }
-  .hamburger-cross-button.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 0px;
-    left: 0px; }
-  .hamburger-cross-button.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0; }
-  .hamburger-cross-button.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    top: 31px;
-    left: 0px; }
 
 .reveal-modal, dialog, .reveal-modal-bg {
   max-width: 100%;
@@ -6320,16 +6188,6 @@ section.profile {
       color: #fff;
       font-family: "Playfair Display";
       font-weight: 400 !important; }
-    section.profile .me a {
-      color: #fff;
-      -webkit-animation-name: Floatingx;
-      -webkit-animation-duration: 2s;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: ease-in-out;
-      -moz-animation-name: Floating;
-      -moz-animation-duration: 2s;
-      -moz-animation-iteration-count: infinite;
-      -moz-animation-timing-function: ease-in-out; }
     @media only screen and (min-width:64.063em) {
       section.profile .me h1 {
         font-size: 7.5rem; }
@@ -6356,6 +6214,15 @@ section.intro {
   position: relative;
   z-index: 9;
   font-family: "Playfair Display"; }
+  section.intro .hover {
+    font-size: 1em;
+    position: absolute;
+    bottom: -50px; }
+    section.intro .hover:hover {
+      background-color: transparent; }
+  @media only screen and (min-width:40.063em) {
+    section.intro {
+      height: 100%; } }
   section.intro:after {
     content: "";
     display: block;
@@ -6373,9 +6240,20 @@ section.intro {
         background-size: 64px 33px; } }
   section.intro p {
     font-size: 1.125rem; }
+    section.intro p a {
+      color: #fff;
+      display: inline-block;
+      height: 2.5rem;
+      -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+              transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+      section.intro p a:hover {
+        -webkit-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+                transform: translateX(10px);
+        background-color: #97ca1e; }
     @media only screen and (min-width:64.063em) {
       section.intro p {
-        font-size: 2.25rem;
+        font-size: 1.75rem;
         width: 62.5rem;
         margin: 0 auto; } }
   section.intro > .row {
@@ -6407,9 +6285,9 @@ section.employment .job {
           transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative; }
   section.employment .job:hover {
-    -webkit-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-            transform: scale(1.02); }
+    -webkit-transform: translate(0.625rem, 0);
+        -ms-transform: translate(0.625rem, 0);
+            transform: translate(0.625rem, 0); }
   section.employment .job .info-button {
     background: #00a8c6;
     color: #fff;
@@ -6422,6 +6300,10 @@ section.employment .job {
     margin-top: -1em;
     right: 1em;
     text-align: center; }
+    section.employment .job .info-button i {
+      -webkit-transform: translate(1px, 0);
+          -ms-transform: translate(1px, 0);
+              transform: translate(1px, 0); }
 
 @media only screen and (min-width:64.063em) {
   section.skills {
@@ -6478,8 +6360,8 @@ section.value {
 section.links {
   padding: 2em 0; }
   section.links a {
-    background-color: #3c84aa;
-    color: #fff;
+    background-color: #00a8c6;
+    color: #202020;
     display: inline-block;
     padding: 3px 5px;
     margin: 3px;
@@ -6487,7 +6369,7 @@ section.links {
             transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     font-size: 1.2em; }
     section.links a:hover {
-      background-color: #00a8c6; }
+      background-color: #0abbf5; }
 
 section.contact {
   background-color: #aee239;
@@ -6509,10 +6391,127 @@ section.contact {
         -ms-transform: scaleY(-1);
             transform: scaleY(-1); }
   section.contact .small.clear.button {
-    color: #59720b;
+    color: #fff;
     border-color: #59720b;
-    border-radius: 2px; }
+    border-width: 2px;
+    text-transform: uppercase;
+    padding: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: #59720b;
+    -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+    section.contact .small.clear.button:hover {
+      -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+              transform: rotate(360deg); }
+    section.contact .small.clear.button i {
+      -webkit-transform: translate(1px, -1px);
+          -ms-transform: translate(1px, -1px);
+              transform: translate(1px, -1px); }
 
 footer.footer {
   background-color: #aee239;
   padding-bottom: 2.75rem; }
+
+.reveal-modal.job .modal-bar .control, .reveal-modal.job .modal-bar dialog.job, .reveal-modal.job .close-button, .reveal-modal.job dialog.job {
+  display: block;
+  width: 33% !important; }
+.reveal-modal .modal-bar .control, .reveal-modal .modal-bar dialog {
+  display: none; }
+.reveal-modal .modal-bar .close-button, .reveal-modal .modal-bar dialog {
+  width: 100%; }
+.reveal-modal .modal-bar .fa, .reveal-modal .modal-bar dialog {
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+.reveal-modal .modal-bar .fa-times, .reveal-modal .modal-bar dialog {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+.reveal-modal .modal-bar .fa-arrow-left, .reveal-modal .modal-bar dialog {
+  -webkit-transform: translateX(12px);
+      -ms-transform: translateX(12px);
+          transform: translateX(12px); }
+.reveal-modal .modal-bar .fa-arrow-right, .reveal-modal .modal-bar dialog {
+  -webkit-transform: translateX(-12px);
+      -ms-transform: translateX(-12px);
+          transform: translateX(-12px); }
+.reveal-modal .job-desc.columns > *, .reveal-modal .job-desc.columns > dialog {
+  -webkit-transform: translateY(-1em);
+      -ms-transform: translateY(-1em);
+          transform: translateY(-1em);
+  opacity: 0; }
+.reveal-modal .aux, .reveal-modal dialog {
+  opacity: 0;
+  -webkit-transform: translateY(-2.75rem);
+      -ms-transform: translateY(-2.75rem);
+          transform: translateY(-2.75rem);
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s; }
+  .reveal-modal .aux .spinning, .reveal-modal .aux dialog {
+    -webkit-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s; }
+.reveal-modal.in .aux, .reveal-modal.in dialog.in {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
+  .reveal-modal.in .aux .spinning, .reveal-modal.in .aux dialog.in {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg); }
+.reveal-modal.in li, .reveal-modal.in dialog.in {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1; }
+  .reveal-modal.in li:nth-child(0), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s; }
+  .reveal-modal.in li:nth-child(1), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s; }
+  .reveal-modal.in li:nth-child(2), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s; }
+  .reveal-modal.in li:nth-child(3), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s; }
+  .reveal-modal.in li:nth-child(4), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s; }
+  .reveal-modal.in li:nth-child(5), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.35s;
+            transition-delay: 0.35s; }
+  .reveal-modal.in li:nth-child(6), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s; }
+  .reveal-modal.in li:nth-child(7), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.45s;
+            transition-delay: 0.45s; }
+  .reveal-modal.in li:nth-child(8), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s; }
+  .reveal-modal.in li:nth-child(9), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.55s;
+            transition-delay: 0.55s; }
+  .reveal-modal.in li:nth-child(10), .reveal-modal.in dialog.in {
+    -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s; }
+.reveal-modal.in .modal-bar .fa, .reveal-modal.in .modal-bar dialog.in {
+  opacity: 1; }
+.reveal-modal.in .modal-bar .fa-times, .reveal-modal.in .modal-bar dialog.in {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
+.reveal-modal.in .modal-bar .fa-arrow-left, .reveal-modal.in .modal-bar dialog.in, .reveal-modal.in .modal-bar .fa-arrow-right, .reveal-modal.in .modal-bar dialog.in {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }

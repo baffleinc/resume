@@ -34,6 +34,19 @@ $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
     to {-moz-transform: translate(0, -0px);}    
 }
 
+.hover{
+			color: #fff;
+
+			-webkit-animation-name: Floatingx;
+	    -webkit-animation-duration: 2s;
+	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation-timing-function: ease-in-out;
+	    -moz-animation-name: Floating;
+	    -moz-animation-duration: 2s;
+	    -moz-animation-iteration-count: infinite;
+	    -moz-animation-timing-function: ease-in-out;
+}
+
 body, html{
 	height: 100%;
 	font-family: "Raleway";
@@ -91,7 +104,7 @@ nav.bar{
 		transform: translate3d(0, -5rem, 0);
 		-webkit-transform: translate3d(0, -5rem, 0);
 		opacity: 0;
-		background-color: #fff;
+		background-color: #fdfcf7;
 		line-height: 5em;
 		height: 5em;
 
@@ -179,97 +192,6 @@ nav.bar{
 		}
 	}
 }
-
-// THIS IS FOR POST MODAL OPEN AWESOME SAUCE //
-
-.reveal-modal{
-
-	&.job{
-		.modal-bar .control,
-		.close-button{
-			display: block;
-			width: 33%!important;
-		}
-	}
-
-	.modal-bar{
-
-		.control{
-			display: none;
-		}
-
-		.close-button{
-			width: 100%;
-		}
-
-		.fa{
-			opacity: 0;
-			transition: all .3s linear;
-		}
-
-		.fa-times{
-			transform: rotate(-90deg);
-		}
-
-		.fa-arrow-left{
-			transform: translateX(12px);
-		}
-
-		.fa-arrow-right{
-			transform: translateX(-12px);
-		}
-
-	}
-
-	.job-desc.columns{
-		> * {
-			transform: translateY(-1em);
-			opacity: 0;
-		}
-	}
-	.aux{
-		opacity: 0;
-		transform: translateY(rem-calc(-44px));
-		transition: all 1s $easeOutExpo;
-		transition-delay: .8s;
-	}
-
-	&.in{
-
-		.aux{
-			opacity: 1;
-			transform: translateY(0);
-		}
-
-		li{
-			transform: translateY(0);
-			opacity: 1;
-			
-			@for $i from 0 through 10 {
-				&:nth-child(#{$i}){
-					transition-delay: .1s + ($i / 20);
-				}
-			}
-		}
-
-		.modal-bar{
-			.fa{
-				opacity: 1;
-			}
-			
-			.fa-times{
-				transform: rotate(0deg);
-			}
-
-			.fa-arrow-left,
-			.fa-arrow-right{
-				transform: translateX(0);
-			}
-		}
-	}
-}
-
-// END AWESOME CONTINUE MORE AWESOME //
 
 
 
@@ -387,7 +309,7 @@ nav.menu{
 .reveal-modal{
 	display: table;
 	position: fixed;
-	background-color: #fff;
+	background-color: #fdfcf7;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -479,7 +401,7 @@ nav.menu{
 	.job-work{
 		padding-top: 2em;
 		padding-bottom: 2em;
-		background-color: #eee;
+		background-color: #f5f2e9;
 
 		h2{
 			font-family: "Playfair Display";
@@ -498,7 +420,7 @@ nav.menu{
 
 		width: 100%;
 
-		background-color: #f8f8f8;
+		background-color: #f5f2e9;
 		position: relative;
 
 		h2{
@@ -543,6 +465,11 @@ nav.menu{
 				transition: all .5s $easeOutExpo;
 			}
 
+			.button{
+				background-color: $green;
+				text-transform: uppercase;
+			}
+
 			img{
 				filter: blur(0);
 				transition: all .5s $easeOutExpo;
@@ -567,65 +494,6 @@ nav.menu{
 		top: -1em;
 		right: 1em;
 	}
-}
-
-.hamburger-cross-button{
-	width: 44px;
-  height: 45px;
-  position: relative;
-  margin: 50px auto;
-  transform: rotate(0deg);
-  transition: .5s $easeInOutExpo;
-  cursor: pointer;
-
-  span{
-  	display: block;
-		position: absolute;
-		height: 1px;
-		width: 100%;
-		background: $red;
-		opacity: 1;
-		left: 0;
-		transform: rotate(0deg);
-
-		transition: .25s $easeInOutExpo;
-	
-		&:nth-child(1) {
-		  top: 0px;
-		  transform-origin: left center;
-		}
-
-		&:nth-child(2) {
-		  top: 18px;
-		  transform-origin: left center;
-		}
-
-		&:nth-child(3) {
-		  top: 36px;
-		  transform-origin: left center;
-		}
-  }
-
-  &.open{
-  	span{
-  		&:nth-child(1) {
-			  transform: rotate(45deg);
-			  top: 0px;
-			  left: 0px;
-			}
-
-			&:nth-child(2) {
-			  width: 0%;
-			  opacity: 0;
-			}
-
-			&:nth-child(3) {
-			  transform: rotate(-45deg);
-			  top: 31px;
-			  left: 0px;
-			}
-  	}
-  }
 }
 
 .reveal-modal,
@@ -718,19 +586,6 @@ section.profile{
 			font-weight: 400!important;
 		}
 
-		a{
-			color: #fff;
-
-			-webkit-animation-name: Floatingx;
-	    -webkit-animation-duration: 2s;
-	    -webkit-animation-iteration-count: infinite;
-	    -webkit-animation-timing-function: ease-in-out;
-	    -moz-animation-name: Floating;
-	    -moz-animation-duration: 2s;
-	    -moz-animation-iteration-count: infinite;
-	    -moz-animation-timing-function: ease-in-out;
-		}
-
 		@media #{$large-up}{
 			h1{
 				font-size: rem-calc(120px);
@@ -768,6 +623,20 @@ section.intro{
 	position: relative;
 	z-index: 9;
 
+	.hover{
+		font-size: 1em;
+		position: absolute;
+		bottom: -50px;
+
+		&:hover{
+			background-color: transparent;
+		}
+	}
+
+	@media #{$medium-up}{
+		height: 100%;
+	}
+
 	&:after{
 		content: "";
 		display: block;
@@ -785,8 +654,20 @@ section.intro{
 	p{
 		font-size: rem-calc(18px);
 
+		a{
+			color: #fff;
+			display: inline-block;
+			height: rem-calc(40px);
+			transition: all .5s $easeOutExpo;
+
+			&:hover{
+				transform: translateX(10px);
+				background-color: darken($green, 10);
+			}
+		}
+
 		@media #{$large-up}{
-			font-size: rem-calc(36px);
+			font-size: rem-calc(28px);
 			width: $row-width;
 			margin: 0 auto;
 		}
@@ -841,7 +722,7 @@ section.employment{
 		position: relative;
 
 		&:hover{
-			transform: scale(1.02);
+			transform: translate(rem-calc(10px), 0);
 		}
 
 		.info-button{
@@ -861,6 +742,10 @@ section.employment{
 			
 			right: 1em;
 			text-align: center;
+
+			i{
+				transform: translate(1px, 0);
+			}
 		}
 	}
 }
@@ -944,8 +829,8 @@ section.links{
 	padding: 2em 0;
 
 	a{
-		background-color: $blue;
-		color: #fff;
+		background-color: $primary-color;
+		color: #202020;
 		display: inline-block;
 		padding: 3px 5px;
 		margin: 3px;
@@ -953,7 +838,7 @@ section.links{
 		font-size: 1.2em;
 
 		&:hover{
-			background-color: $primary-color;
+			background-color: #0abbf5;
 		}
 	}
 }
@@ -980,9 +865,25 @@ section.contact{
 	}
 
 	.small.clear.button{
-		color: #59720b;
+		color: #fff;
 		border-color: #59720b;
-		border-radius: 2px;
+		border-width: 2px;
+		text-transform: uppercase;
+		padding: 0;
+		line-height: 40px;
+		border-radius: 20px;
+		height: 40px;
+		width: 40px;
+		background-color: #59720b;
+		transition: all 1s $easeOutExpo;
+
+		&:hover{
+			transform: rotate(360deg);
+		}
+
+		i{
+			transform: translate(1px, -1px);
+		}
 	}
 }
 
@@ -992,3 +893,104 @@ footer.footer{
 }
 
 
+
+
+// THIS IS FOR POST MODAL OPEN AWESOME SAUCE //
+
+.reveal-modal{
+
+	&.job{
+		.modal-bar .control,
+		.close-button{
+			display: block;
+			width: 33%!important;
+		}
+	}
+
+	.modal-bar{
+
+		.control{
+			display: none;
+		}
+
+		.close-button{
+			width: 100%;
+		}
+
+		.fa{
+			opacity: 0;
+			transition: all .3s linear;
+		}
+
+		.fa-times{
+			transform: rotate(-90deg);
+		}
+
+		.fa-arrow-left{
+			transform: translateX(12px);
+		}
+
+		.fa-arrow-right{
+			transform: translateX(-12px);
+		}
+
+	}
+
+	.job-desc.columns{
+		> * {
+			transform: translateY(-1em);
+			opacity: 0;
+		}
+	}
+	.aux{
+		opacity: 0;
+		transform: translateY(rem-calc(-44px));
+		transition: all 1s $easeOutExpo;
+		transition-delay: .5s;
+
+		.spinning{
+			transition: all 1.5s $easeOutExpo;
+			transition-delay: .5s;
+		}
+	}
+
+	&.in{
+
+		.aux{
+			opacity: 1;
+			transform: translateY(0);
+
+			.spinning{
+				transform: rotate(360deg);
+			}
+		}
+
+		li{
+			transform: translateY(0);
+			opacity: 1;
+			
+			@for $i from 0 through 10 {
+				&:nth-child(#{$i}){
+					transition-delay: .1s + ($i / 20);
+				}
+			}
+		}
+
+		.modal-bar{
+			.fa{
+				opacity: 1;
+			}
+			
+			.fa-times{
+				transform: rotate(0deg);
+			}
+
+			.fa-arrow-left,
+			.fa-arrow-right{
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+// END AWESOME CONTINUE MORE AWESOME //

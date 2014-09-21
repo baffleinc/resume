@@ -81,34 +81,11 @@ angular.module('harley.services', [])
 					},
 					{
 						title: "Yummoo",
-						desc : "I designed & build yummoo.com.au, as well as did their offline print artworks.",
+						desc : "I designed & build yummoo.com.au, as well as their offline print collateral, as well as brick-and-mortar store artwork.",
 						img: 'yummoo-mobile.png',
 						link: 'http://yummoo.com.au'
 					}
 
-				]
-			},
-			{
-				company: "Incsub",
-				title: "Copywriting & Tech Journalism",
-				when: "February 2013 - April 2013",
-				desc: "Incsub love all things WordPress. \
-						I was an in-house author for their popular blog, wpmudev.org - educating the masses on how to be better WordPress designers and developers. <br>\
-						I also wrote the copy accompanying new plugin releases, as well as theme releases.",
-				ref: [
-					{
-						name: "James Farmer",
-						url: "http://www.linkedin.com/profile/view?id=23995"
-					},
-				], 
-				workTitle: 'My work as an "Epic Wordsmith"',
-				work: [
-					{
-						title: 'WPMUDEV articles',
-						link: 'http://premium.wpmudev.org/blog/author/harleya/',
-						img: 'incsub.png'
-	
-					}
 				]
 			},
 			{
@@ -137,7 +114,7 @@ angular.module('harley.services', [])
 					},
 					{
 						title: 'Internal Products',
-						desc: 'Unfortunately not all internal products made it to the press. I worked on a user testing service named earl.io, as well as a content aggreator product named "The Wall".',
+						desc: 'Unfortunately not all internal products made it to the press. I worked on an automated page-testing service named earl.io, as well as a content aggreator app named "The Wall".',
 						img: 'earl-mobile.png'
 					}
 				]
@@ -152,7 +129,6 @@ angular.module('harley.services', [])
 						name: "Available on request"
 					}
 				],
-				workTitle: 'A sample of my freelance work',
 				work: [
 					{
 						title: "Lighting Partners",
@@ -177,6 +153,28 @@ angular.module('harley.services', [])
 						desc: "ArcadiaLA were in need of a serious modernisation. I worked with them to bring their projects online in a gorgeous portfolio.",
 						link: 'http://arcadiala.com.au',
 						img: 'arcadia-mobile.png'
+					}
+				]
+			},
+			{
+				company: "Incsub",
+				title: "Copywriting & Tech Journalism",
+				when: "February 2013 - April 2013",
+				desc: "Incsub love all things WordPress. \
+						I was an in-house author for their popular blog, wpmudev.org - educating the masses on how to be better WordPress designers and developers. <br>\
+						I also wrote the copy accompanying new plugin releases, as well as theme releases.",
+				ref: [
+					{
+						name: "James Farmer",
+						url: "http://www.linkedin.com/profile/view?id=23995"
+					},
+				],
+				work: [
+					{
+						title: 'WPMUDEV articles',
+						link: 'http://premium.wpmudev.org/blog/author/harleya/',
+						img: 'incsub.png'
+	
 					}
 				]
 			},
@@ -320,11 +318,11 @@ angular.module('harley.services', [])
 		links: [
 			{name: "How to Be a Rockstar WordPress Designer", url: "https://tutsplus.com/ebook/rockstar-wordpress-designer/"},
 			{name: "An interview with me about my book", url: "http://net.tutsplus.com/articles/interviews/an-interview-with-harley-alexander/"},
-			{name: "Another interview with me about my photography", url: "http://www.artgallery.nsw.gov.au/channel/clip/218/"},
 			{name: "My articles on WPMU.org", url: "http://wpmu.org/author/harleya/"},
 			{name: "My articles on Tuts+", url: "http://nettuts.com/author/harley"},
 			{name: "A case study on the SitePoint logo", url: "http://www.sitepoint.com/sitepoints-new-logo-and-the-story-behind-it/"},
-			{name: "Me @ ArtExpress 2011", url: "http://artexpress.artsunit.nsw.edu.au/2011Photomedia.html"}
+			{name: "Me @ ArtExpress 2011", url: "http://artexpress.artsunit.nsw.edu.au/2011Photomedia.html"},
+			{name: "An interview with me about my ArtExpress entry", url: "http://www.artgallery.nsw.gov.au/channel/clip/218/"},
 		]
 	}
 }])
