@@ -24,21 +24,20 @@
     <!-- <nav-menu></nav-menu> -->
 
     <nav class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
-      <a ng-click="openMenu()" class="fa fa-bars show-for-large-up desktop-menu-button"></a>
+      <!-- <a ng-click="openMenu()" class="fa fa-bars show-for-large-up desktop-menu-button"></a> -->
+      <a ng-click="openMenu()" class="show-for-large-up desktop-menu-button">menu</a>
       <div class="row">
         <div class="small-12 columns">
           <strong>Harley Alexander</strong>
-          <span class="right hide-for-large-up">
             <!-- <a ng-click="toTheTop()" class="fa fa-chevron-up"></a> -->
-            <a href="tel:+61422808381" class="fa fa-phone"></a>
-            <a href="mailto:harley@baffleinc.com" class="fa fa-envelope"></a>
+            <a href="tel:+61422808381" class="fa fa-phone hide-for-large-up"></a>
+            <a href="mailto:harley@baffleinc.com" class="fa fa-envelope hide-for-large-up"></a>
             <!-- <a href="http://www.linkedin.com/profile/view?id=124411655" class="fa fa-linkedin"></a> -->
-            <a ng-click="openMenu()" class="fa fa-bars"></a>
-          </span>
+            <a ng-click="openMenu()" class="fa fa-bars hide-for-large-up"></a>
 
           <span class="right show-for-large-up info">
-            <a href="mailto:harley@baffleinc.com"><i class="fa fa-envelope"></i></a> &bull; 
-            0422 808 381
+            0422 808 381 &bull; <a href="mailto:harley@baffleinc.com"><i class="fa fa-envelope"></i></a> 
+            
           </span>
         </div>
       </div>
@@ -48,8 +47,8 @@
       <div class="contact">
         <div class="row">
           <div class="small-12 columns buttons">
-            <a href="tel:+61422808381" class="small clear button radius"><i class="fa fa-phone"></i></a> 
-            <a href="mailto:harley@baffleinc.com" class="small clear button radius"><i class="fa fa-envelope"></i></a> 
+            <!-- <a href="tel:+61422808381" class="small clear button radius"><i class="fa fa-phone"></i></a> 
+            <a href="mailto:harley@baffleinc.com" class="small clear button radius"><i class="fa fa-envelope"></i></a>  -->
             <a href="http://www.linkedin.com/profile/view?id=124411655" target="_blank" class="small clear button radius"><i class="fa fa-linkedin"></i></a> 
           </div>
         </div>
@@ -135,6 +134,16 @@
         </div>
       </div>
     </section>
+ <hr>
+    <section class="links" id="links">
+     
+      <div class="row">
+        <div class="small-12 columns">
+          <h2>Some links to boot</h2>
+          <a ng-repeat="link in links" ng-href="{{ link.url }}">{{ link.name }}</a>
+        </div>
+      </div>
+    </section>
 
     <section class="contact" id="contact">
       <div class="row">
@@ -144,7 +153,7 @@
           <a href="tel:+6422808381" class="small clear button"><i class="fa fa-phone"></i>  holler</a>
           <a href="mailto:harley@baffleinc.com" class="small clear button"><i class="fa fa-envelope"></i> write</a>
           <a href="http://www.linkedin.com/profile/view?id=124411655" class="small clear button"><i class="fa fa-linkedin"></i> connect</a>
-          <a href="harley.vcf" class="small clear button"><i class="fa fa-download"></i> keep</a>
+          <a href="images/harley.vcf" class="small clear button"><i class="fa fa-download"></i> keep</a>
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ angular.module('harley.services', [])
 			},
 			{
 				title: "Design Chops",
-				desc: "I have a brain wired for design thinking, problem solving and aesthetics. I have extensive experience with Photoshop, Illustrator and Indesign. I also have a solid understanding of beautiful typography."
+				desc: "I have a brain wired for design thinking, problem solving and aesthetics. I have extensive experience with Photoshop, Illustrator and Indesign. I also have a solid understanding of beautiful typography. I take pride in great visual design & attention to detail."
 			},
 			{
 				title: "Technical Wisdom",
@@ -40,10 +40,10 @@ angular.module('harley.services', [])
 				company: "Marketing Partners",
 				title: "Digital & Print Designer, Front-end Developer",
 				when: "April 2013 - present",
-				desc: "<p>Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. <br>\
-						<p>My current duties here are vast - everything from designing & building clients' websites, to designing any offline material including activation collateral. I even had the opportunity to design wall art for <a href='http://yummoo.com.au' target='_blank'>Yummoo's Flagship store</a>!<br>\
-						<p>At Marketing Partners, I have learnt how to build websites that sell and convert, coupled with the best possible user experience. <br>\
-						<p>Working here is also giving me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.</p>",
+				desc: "Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. <br>\
+						My current duties here are vast - everything from designing & building clients' websites, to designing any offline material including activation collateral. I even had the opportunity to design wall art for <a href='http://yummoo.com.au' target='_blank'>Yummoo's Flagship store</a>!<br>\
+						At Marketing Partners, I have learnt how to build websites that sell and convert, coupled with the best possible user experience. <br>\
+						Working here is also giving me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.</p>",
 				ref: [
 					{
 						name: "Looking for a reference? I still work @ Marketing Partners, that could get awkward!"
@@ -51,19 +51,39 @@ angular.module('harley.services', [])
 				],
 				work: [
 					{
-						title: "health.com.au Redesign",
-						desc: "MVP Currently in development.",
+						title: "health.com.au v3",
+						desc: "MVP Currently in development, driven by an iterative process.",
 						img: 'new-health-mobile.png'
 					},
 					{
-						title: "Uncomplexicate Micro Site",
-						desc: "Driving an offline marketing campaign.",
-						img: 'uncomplexicate-mobile.png'
+						title: "Uncomplexicate",
+						desc: "A microsite under the health.com.au brand that drives offline marketing campaigns.",
+						img: 'uncomplexicate-mobile.png',
+						link: 'http://uncomplexicate.com.au'
 					},
 					{
-						title: "health.com.au Website",
+						title: "health.com.au",
 						desc : "health.com.au's flagship website.",
 						img: 'health-mobile.png',
+						link: 'http://health.com.au'
+					},
+					{
+						title: "OzMattress",
+						desc : "I worked on the OzMattress 2014 redesign.",
+						img: 'ozmattress-mobile.png',
+						link: 'http://ozmattress.com.au'
+					},
+					{
+						title: "EngagementHQ",
+						desc : "I designed & build the EngagementHQ 2014 website.",
+						img: 'engagement-hq.png',
+						link: 'http://staging.engagementhq.com'
+					},
+					{
+						title: "Yummoo",
+						desc : "I designed & build yummoo.com.au, as well as did their offline print artworks.",
+						img: 'yummoo-mobile.png',
+						link: 'http://yummoo.com.au'
 					}
 
 				]
@@ -73,7 +93,8 @@ angular.module('harley.services', [])
 				title: "Copywriting & Tech Journalism",
 				when: "February 2013 - April 2013",
 				desc: "Incsub love all things WordPress. \
-						I was an in-house author for their popular blog, wpmudev.org - educating the masses on how to be better WordPress designers and developers.",
+						I was an in-house author for their popular blog, wpmudev.org - educating the masses on how to be better WordPress designers and developers. <br>\
+						I also wrote the copy accompanying new plugin releases, as well as theme releases.",
 				ref: [
 					{
 						name: "James Farmer",
@@ -117,14 +138,8 @@ angular.module('harley.services', [])
 					{
 						title: 'Internal Products',
 						desc: 'Unfortunately not all internal products made it to the press. I worked on a user testing service named earl.io, as well as a content aggreator product named "The Wall".',
-						img: 'none.png'
-					},
-					{
-						title: "SitePoint Logo Redesign",
-						desc: "A short case study on the sitepoint logo redesign!",
-						link: 'http://www.sitepoint.com/sitepoints-new-logo-and-the-story-behind-it/',
-						img: 'sitepoint-logo.png'
-					},
+						img: 'earl-mobile.png'
+					}
 				]
 			},
 			{
@@ -140,25 +155,25 @@ angular.module('harley.services', [])
 				workTitle: 'A sample of my freelance work',
 				work: [
 					{
-						title: "Lighting Partners Australia desktop & mobile site",
+						title: "Lighting Partners",
 						desc: "I worked closely with LPAust to bring their catalogue online, with a clean, modern and responsive website.",
 						link: 'http://lpaust.com.au',
 						img: 'lpaust-mobile.png'
 					},
 					{
-						title: "Lahznimmo.com desktop & mobile site",
+						title: "Lahznimmo",
 						desc: "Lahznimmo Architects is a leading Australian Architecture firm based in Newtown, Sydney. I redesigned & redeveloped their website for desktop & mobile, working closely with the team.",
-						url: 'http://lahznimmo.com',
+						link: 'http://lahznimmo.com',
 						img: 'lahznimmo-mobile.png'
 					},
 					{
-						title: "Moments of Spur desktop & mobile site",
+						title: "Moments of Spur",
 						desc: "Moments of Spur was a custom designed fashion blog for Melbourne Blogger Shalini Papas.",
-						url: 'http://momentsofspur.com',
+						link: 'http://momentsofspur.com',
 						img: 'mos-mobile.png'
 					},
 					{
-						title: "Arcadia Landscape Architects desktop & mobile site",
+						title: "Arcadia Landscape",
 						desc: "ArcadiaLA were in need of a serious modernisation. I worked with them to bring their projects online in a gorgeous portfolio.",
 						link: 'http://arcadiala.com.au',
 						img: 'arcadia-mobile.png'
@@ -308,7 +323,8 @@ angular.module('harley.services', [])
 			{name: "Another interview with me about my photography", url: "http://www.artgallery.nsw.gov.au/channel/clip/218/"},
 			{name: "My articles on WPMU.org", url: "http://wpmu.org/author/harleya/"},
 			{name: "My articles on Tuts+", url: "http://nettuts.com/author/harley"},
-			{name: "A case study on the SitePoint logo", url: "http://www.sitepoint.com/sitepoints-new-logo-and-the-story-behind-it/"}
+			{name: "A case study on the SitePoint logo", url: "http://www.sitepoint.com/sitepoints-new-logo-and-the-story-behind-it/"},
+			{name: "Me @ ArtExpress 2011", url: "http://artexpress.artsunit.nsw.edu.au/2011Photomedia.html"}
 		]
 	}
 }])

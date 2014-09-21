@@ -1,5 +1,5 @@
 <div class="modal-bar">
-	<a ng-click="prev()" class="control previous-button"><i class="fa fa-arrow-left fa-2x"></i></a>
+	<a ng-click="prev()" class="control previous-button"><i class="fa fa-arrow-left fa-2x"></i> <span class="hide-for-small">{{ prevTitle }}</span></a>
 	<a ng-click="$close()" class="close-button"><i class="fa fa-times fa-2x"></i></a>
 	<a ng-click="next()" class="control next-button"><i class="fa fa-arrow-right fa-2x"></i></a>
 </div>
@@ -16,16 +16,21 @@
 
 		<div class="job-work" ng-show="job.work">
 			<div class="scroller">
-				<h2 class="small-12 columns next-title">Some of my work from here</h2>
-				<div ng-repeat="work in job.work"  class="work" horizontal-scroll>
+				<h2 class="next-title">Some of my work from here</h2>
+				<div ng-repeat="work in job.work"  class="work" work-tile ng-class="{ 'show-info' : hovering }">
 					<div class="info row small-12 columns">
 						<h3>{{ work.title }}</h3>
-						<hr>
+						<hr class="show-for-small">
 					</div>
 					<img ng-show="work.img" ng-src="images/work/{{ work.img }}" alt="">
-					<div class="small-12 columns clearfix">{{ work.desc }}</div>
+					<div class="clearfix"></div>
+					<div class="small-12 columns extra-info">
+						<p>{{ work.desc }}</p>
+						<a ng-show="work.link" ng-href="{{ work.link }}" target="_blank" class="button">See</a>
+					</div>
 			</div>
 			</div>
+			<div class="clearfix"></div>
 		</div>
 
 		<span class="ref">ref: <a ng-repeat="ref in job.ref" href="{{ ref.link }}">{{ ref.name }} &bull;</a></span> 

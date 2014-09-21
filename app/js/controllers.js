@@ -2,14 +2,15 @@
 
 angular.module('harley.controllers', [])
 
-.controller('MainController', ['$scope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education',
-	function($scope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education){
+.controller('MainController', ['$scope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education', 'Links',
+	function($scope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education, Links){
 
 	// FILL SCOPE WITH MY AWESOMENESS //
 	$scope.points = Proof.points;
 	$scope.employment = Employment.history;
 	$scope.skills = Skills.skills;
 	$scope.education = Education.education;
+	$scope.links = Links.links;
 
 	// COOL SCROLLY MENU BAR INTERACTIONS //
 	$scope.showBar = false; // for position of nav bar

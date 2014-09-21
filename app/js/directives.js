@@ -31,16 +31,14 @@ angular.module('harley.directives', [])
 			});
 		}
 	}
-}).directive('cssEqualHeight', function () {
+}).directive('workTile', function () {
     return {
         restrict: 'A',
-        scope: {
-        },
-        link: function (scope, element, attr) {
-            var elementToCopyProperty = attr.cssEqualHeight,
-                source = document.getElementById(elementToCopyProperty.toString());
-            //set height
-            element[0].style.height = source.clientHeight + 'px';
+        link: function(scope, el, attrs){
+        	scope.hovering = false
+        	el.on('mouseenter', function(){
+        		scope.hovering = true;
+        	})
         }
     };
 });
