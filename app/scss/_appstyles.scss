@@ -162,43 +162,52 @@ nav.bar{
 
 	.modal-bar{
 
-			.control{
-				display: none;
-			}
-
-			.close-button{
-				width: 100%;
-			}
-
-			.fa{
-				opacity: 0;
-				transition: all .3s linear;
-			}
-
-			.fa-times{
-				transform: rotate(-90deg);
-			}
-
-			.fa-arrow-left{
-				transform: translateX(12px);
-			}
-
-			.fa-arrow-right{
-				transform: translateX(-12px);
-			}
-
+		.control{
+			display: none;
 		}
+
+		.close-button{
+			width: 100%;
+		}
+
+		.fa{
+			opacity: 0;
+			transition: all .3s linear;
+		}
+
+		.fa-times{
+			transform: rotate(-90deg);
+		}
+
+		.fa-arrow-left{
+			transform: translateX(12px);
+		}
+
+		.fa-arrow-right{
+			transform: translateX(-12px);
+		}
+
+	}
 
 	.job-desc.columns{
 		> * {
 			transform: translateY(-1em);
 			opacity: 0;
 		}
-
-
+	}
+	.aux{
+		opacity: 0;
+		transform: translateY(rem-calc(-44px));
+		transition: all 1s $easeOutExpo;
+		transition-delay: .8s;
 	}
 
 	&.in{
+
+		.aux{
+			opacity: 1;
+			transform: translateY(0);
+		}
 
 		li{
 			transform: translateY(0);
@@ -270,6 +279,26 @@ nav.menu{
 				padding: 0 3px;
 			}
 		}
+	}
+
+	@media #{$large-up}{
+		 .aux{
+		 	color: #fff;
+		 	text-align: center;
+		 	padding-top: rem-calc(88px);
+
+		 	h1{
+		 		font-family: "Playfair Display";
+		 		color: #fff;
+		 		font-size: rem-calc(68px);
+		 		line-height: 1;
+		 		text-transform: uppercase;
+		 	}
+
+		 	p em{
+		 		font-family: "Playfair Display";
+		 	}
+		 }
 	}
 
 	footer{
@@ -437,28 +466,21 @@ nav.menu{
 
 		background-color: #f8f8f8;
 		padding-top: 5em;
-		margin-top: 5em;
 		position: relative;
-
-			h2{
-				position: fixed;
-				top: 0; 
-				left: 0;
-			}
 
 		h2{
 			font-family: "Playfair Display"
 		}
 
 		.scroller{
-			width: 5000em;
+			clear: both;
 		}
 
 		img{
-			max-width: 280px;
+			max-width: 100%;
 
 			@media #{$large-up}{
-				max-width: rem-calc(400px);
+				//max-width: rem-calc(400px);
 			}
 		}
 
@@ -468,17 +490,16 @@ nav.menu{
 				font-family: "Raleway"
 			}
 
+			.next-title{
+				text-align: left;
+			}
+
 		.work{
 			float: left;
-			max-width: 600px;
+			max-width: 300px;
 			text-align: center;
 			border-right: 1px solid #eee;
-			padding: 2em 5em;
-
-
-			h3{
-				min-height: 88px;
-			}
+			padding: 0;
 		}
 	}
 	}

@@ -19,15 +19,18 @@ angular.module('harley.controllers', [])
 	var windowHeight = $window.innerHeight;
 
 	// JOB MODALS //
-	$scope.showJob = function(object){
+	$scope.showJob = function(toShow){
 		$modal.open({
 			templateUrl: 'template/job-modal.html',
 			controller: 'JobModalController',
 			showControls: true,
 			windowClass: 'job',
 			resolve: {
-				Job: function(){
-					return object;
+				Jobs: function(){
+					return Employment.history;
+				},
+				job: function(){
+					return toShow;
 				}
 			}
 		});
@@ -82,24 +85,22 @@ angular.module('harley.controllers', [])
 
 }])
 
-.controller('JobModalController', ['$scope', '$sce', 'Job', function($scope, $sce, Job){
-	$scope.job = Job;
+.controller('JobModalController', ['$scope', '$sce', 'Jobs', 'job', function($scope, $sce, Jobs, job){
+	$scope.jobs = Jobs;
+	$scope.activeJob = job;
+	$scope.job = $scope.jobs[$scope.activeJob];
+	console.log($scope.job);
+
 	$scope.windowClass = 'job';
 	$scope.showControls = true;
 
-	$scope.job.desc = $sce.trustAsHtml($scope.job.desc);
+	// $scope.job.descSafe = $sce.trustAsHtml($scope.job.desc);
 
 	$scope.openWork = function(link){
 		if(link !== "") window.open(link,'_blank');
 	}
 
-	$scope.nextWork = function(){
-		
-	}
-
-	$scope.prevWork = function(){
-
-	}
+	
 }]);
 
 

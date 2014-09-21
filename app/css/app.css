@@ -5922,6 +5922,14 @@ nav.bar {
 .reveal-modal .job-desc.columns > *, .reveal-modal .job-desc.columns > dialog {
   transform: translateY(-1em);
   opacity: 0; }
+.reveal-modal .aux, .reveal-modal dialog {
+  opacity: 0;
+  transform: translateY(-2.75rem);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: 0.8s; }
+.reveal-modal.in .aux, .reveal-modal.in dialog.in {
+  opacity: 1;
+  transform: translateY(0); }
 .reveal-modal.in li, .reveal-modal.in dialog.in {
   transform: translateY(0);
   opacity: 1; }
@@ -5980,6 +5988,19 @@ nav.menu {
         display: inline-block;
         background-color: #505050;
         padding: 0 3px; }
+  @media only screen and (min-width:64.063em) {
+    nav.menu .aux {
+      color: #fff;
+      text-align: center;
+      padding-top: 5.5rem; }
+      nav.menu .aux h1 {
+        font-family: "Playfair Display";
+        color: #fff;
+        font-size: 4.25rem;
+        line-height: 1;
+        text-transform: uppercase; }
+      nav.menu .aux p em {
+        font-family: "Playfair Display"; } }
   nav.menu footer {
     color: #fff;
     line-height: 32px; }
@@ -6086,31 +6107,24 @@ nav.menu {
       overflow-y: scroll;
       background-color: #f8f8f8;
       padding-top: 5em;
-      margin-top: 5em;
       position: relative; }
-      .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
-        position: fixed;
-        top: 0;
-        left: 0; }
       .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
         font-family: "Playfair Display"; }
       .reveal-modal .job-work .scroller, .reveal-modal .job-work dialog {
-        width: 5000em; }
+        clear: both; }
       .reveal-modal .job-work img, .reveal-modal .job-work dialog {
-        max-width: 280px; }
-        @media only screen and (min-width:64.063em) {
-          .reveal-modal .job-work img {
-            max-width: 25rem; } }
+        max-width: 100%; }
+        @media only screen and (min-width:64.063em) { }
       .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
         font-family: "Raleway"; }
+      .reveal-modal .job-work .next-title, .reveal-modal .job-work dialog {
+        text-align: left; }
       .reveal-modal .job-work .work, .reveal-modal .job-work dialog {
         float: left;
-        max-width: 600px;
+        max-width: 300px;
         text-align: center;
         border-right: 1px solid #eee;
-        padding: 2em 5em; }
-        .reveal-modal .job-work .work h3, .reveal-modal .job-work .work dialog {
-          min-height: 88px; } }
+        padding: 0; } }
   .reveal-modal .hamburger-cross-button, .reveal-modal dialog {
     position: absolute;
     top: -1em;

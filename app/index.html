@@ -75,7 +75,7 @@
         <div class="small-12 columns">
           <p class="text-center">
 
-            What's up, I'm Harley! I'm a Melbourne based hybrid designer-developer with a passionate focus on user experience. I love creating a seamless experience with a gorgeous design. I've been doing so for around seven years, on a range of projects. For the past three years, I've been with some of Australia's leading startups, working on their digital products. I also have marketing experience. I want to focus my career down the path of product design.
+            What's up, I'm Harley! I'm a Melbourne based hybrid designer-developer with a passionate focus on user experience. I love creating a seamless experience with gorgeous design. I've been doing so for around seven years on a range of projects. For the past three years, I've been with some of Australia's leading startups, working on their digital products. I also have marketing experience. I want to focus my career down the path of product design.
         </div>
       </div>
     </section>
@@ -84,7 +84,7 @@
       <div class="row">
         <h2 class="small-12 columns">Employment History</h2>
       </div>
-      <div ng-repeat="job in employment" ng-click="showJob(job)" class="job band row {{ slug(job.company) }}">
+      <div ng-repeat="job in employment" ng-click="showJob($index)" class="job band row {{ slug(job.company) }}">
         <div class="small-12 columns">
           <p class="pre-title">{{ job.company }}</p>
           <h3>{{ job.title }}</h3>
