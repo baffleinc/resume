@@ -31,7 +31,8 @@ angular.module('harley.directives', [])
 			});
 		}
 	}
-}).directive('workTile', function () {
+})
+.directive('workTile', function () {
     return {
         restrict: 'A',
         link: function(scope, el, attrs){
@@ -41,7 +42,22 @@ angular.module('harley.directives', [])
         	})
         }
     };
-});
+})
+.directive('preloadBackground', ['preload', function(preload) {
+    return {
+      restrict: 'EA',
+      scope: {
+      	loaded: '=loaded'
+      },
+      link: function(scope, element, attrs, tabsCtrl) {
+        preload(attrs.url).then(function(){
+          element.css({
+            "background-image": "url('" + attrs.url + "')"
+          });
+        });
+      }
+    };
+  }]);
 
 // .directive('navMenu', function($modal, $document){
 // 	return {

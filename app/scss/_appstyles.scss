@@ -29,9 +29,9 @@ $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
 }
 
 @keyframes Floatingk{
-    from {-moz-transform:translate(0, 0px);}
-    65% {-moz-transform:translate(0, 15px);}
-    to {-moz-transform: translate(0, -0px);}    
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 15px);}
+    to {transform: translate(0, -0px);}    
 }
 
 .hover{
@@ -309,7 +309,7 @@ nav.menu{
 .reveal-modal{
 	display: table;
 	position: fixed;
-	background-color: #fdfcf7;
+	background-color: #fff;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -521,6 +521,20 @@ section{
 	margin-bottom: 4em;
 }
 
+div.preload{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 9999;
+}
+
+div.preload.loaded{
+	opacity: 0;
+}
+
 section.profile{
 	height: 105%;
 	width: 100%;
@@ -532,7 +546,7 @@ section.profile{
 
 	background: $blue;
 
-	background: url(../images/city.jpg) no-repeat center center; 
+	background: url() no-repeat center center; 
   background-size: cover;
 
   display: table;
@@ -543,16 +557,15 @@ section.profile{
   	vertical-align: middle;
   }
 
-  svg{
-  	position: absolute;
-  	bottom: 0;
-  	left: 0;
-  	width: 100%;
+  .fa-angle-down{
+  	font-size: 1.5rem;
 
-  	polygon{
-  		fill: red;
+  	&:hover{
+  		opacity: .5;
+  		color: #fff;
   	}
   }
+
 
   .me{
 
@@ -576,7 +589,6 @@ section.profile{
 			text-transform: uppercase;
 
 			// transform: rotate(-10deg) skewX(-10deg);
-			padding-bottom: rem-calc(30px);
 		}
 
 		h1,
@@ -589,6 +601,10 @@ section.profile{
 		@media #{$large-up}{
 			h1{
 				font-size: rem-calc(120px);
+			}
+
+			p{
+				font-size: 1.5rem;
 			}
 
 			img.logo{
@@ -656,20 +672,22 @@ section.intro{
 
 		a{
 			color: #fff;
-			display: inline-block;
-			height: rem-calc(40px);
-			transition: all .5s $easeOutExpo;
-
-			&:hover{
-				transform: translateX(10px);
-				background-color: darken($green, 10);
-			}
 		}
 
 		@media #{$large-up}{
 			font-size: rem-calc(28px);
 			width: $row-width;
 			margin: 0 auto;
+
+			a{
+				display: inline-block;
+				height: rem-calc(40px);
+				transition: all .5s $easeOutExpo;
+			}
+			a:hover{
+				transform: translateX(10px);
+				background-color: darken($green, 10);
+			}
 		}
 	}
 
@@ -722,7 +740,7 @@ section.employment{
 		position: relative;
 
 		&:hover{
-			transform: translate(rem-calc(10px), 0);
+			transform: scale(1.05);
 		}
 
 		.info-button{

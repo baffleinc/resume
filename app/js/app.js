@@ -3,6 +3,7 @@
 angular.module('harley', [
 	'ngTouch',
 	'duScroll',
+	'duParallax',
 	'mm.foundation',
 	'ngAnimate',
 	'angular-carousel',

@@ -21,6 +21,8 @@
   </head>
   <body ng-controller="MainController">
 
+    <!-- <div class="preload" ng-class="{ 'loaded': bgLoaded }">loading...</div> -->
+
     <!-- <nav-menu></nav-menu> -->
 
     <nav class="bar" ng-class="{ 'scrolled' : showBar, 'visible' : barVisible }">
@@ -43,7 +45,9 @@
       </div>
     </nav>
 
-    <section class="profile" id="profile">
+    <!-- <img src="images/city.jpg" du-parallax y="Background"> -->
+
+    <section class="profile" id="profile" preload-background url="images/city.jpg" loaded="'hello'">
       <div class="contact">
         <div class="row">
           <div class="small-12 columns buttons">
@@ -57,7 +61,7 @@
       <div class="table-cell me">
         <div class="row">
           <div class="small-12 columns">
-            <img src="images/logo.png" alt="" class="logo" width="64px" height="64px" spinning-logo>
+            <img src="images/logo.png" alt="" class="logo" width="64px" height="64px" spinning-logo class="intro-logo">
             <h1>Harley Alexander</h1>
             <p><em>User Experience Designer<br>
               Digital &amp; Print Designer<br>
@@ -74,7 +78,7 @@
         <div class="small-12 columns">
           <p class="text-center">
 
-            What's up, I'm Harley! I'm a Melbourne based hybrid designer-developer with a passionate focus on UXD. I love creating a seamless experience with gorgeous design. I've been doing so for around seven years on a variety of projects. For the past three years, I've been with some of Australia's leading startups delivering their digital products. <a href="http://www.goodreads.com/book/show/8185535-how-to-be-a-rockstar-wordpress-designer" target="_blank">I co-authored a book on WordPress Design.</a><br class="hide-for-small-only"> I also have marketing experience, having worked in a fast-paced marketing agency. I want to focus my career down the path of product design.</p>
+            What's up, I'm Harley! I'm a Melbourne based hybrid designer-developer with a passionate focus on UXD. I love creating a seamless experience with gorgeous design. I've been doing so for around seven years on a variety of projects. For the past three years, I've been with some of Australia's leading startups delivering their digital products. <a href="http://www.goodreads.com/book/show/8185535-how-to-be-a-rockstar-wordpress-designer" target="_blank">I co-authored a book on WordPress <span class="hide-for-small-only">Design</span>.</a><br class="show-for-large-up"> I also have marketing experience, having worked in a fast-paced marketing agency. I want to focus my career down the path of product design.</p>
             <p class="text-center"><a class="fa fa-angle-down fa-2x hover" du-smooth-scroll href="#employment"></a></p>
         </div>
       </div>

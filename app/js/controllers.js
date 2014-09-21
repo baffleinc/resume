@@ -12,6 +12,9 @@ angular.module('harley.controllers', [])
 	$scope.education = Education.education;
 	$scope.links = Links.links;
 
+	//
+	$scope.bgLoaded = false;
+
 	// COOL SCROLLY MENU BAR INTERACTIONS //
 	$scope.showBar = false; // for position of nav bar
 	$scope.barVisible = false; // for opacity of nav bar
@@ -97,6 +100,8 @@ angular.module('harley.controllers', [])
 	angular.forEach($scope.jobs, function(j){
 		j.descSafe = $sce.trustAsHtml(j.desc);
 	});
+
+
 
 	$scope.openWork = function(link){
 		if(link !== "") window.open(link,'_blank');
