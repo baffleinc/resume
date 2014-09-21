@@ -40,10 +40,10 @@ angular.module('harley.services', [])
 				company: "Marketing Partners",
 				title: "Digital & Print Designer, Front-end Developer",
 				when: "April 2013 - present",
-				desc: "Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. <br>\
-						Whilst working there, I was in charge of all clients design (both digital and print), as well as their websites, digital products, and marketing campaign collateral. <br>\
-						At Marketing Partners, I learnt how to build websites that sell and convert, coupled with the best possible user experience. <br>\
-						Working here also gave me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.",
+				desc: "<p>Marketing Partners manage the digital business & marketing for a select group of innovative and disruptive startups. <br>\
+						<p>My current duties here are vast - everything from designing & building clients' websites, to designing any offline material including activation collateral. I even had the opportunity to design wall art for <a href='http://yummoo.com.au' target='_blank'>Yummoo's Flagship store</a>!<br>\
+						<p>At Marketing Partners, I have learnt how to build websites that sell and convert, coupled with the best possible user experience. <br>\
+						<p>Working here is also giving me extensive brand experience - adhering to existing guidelines, but also working on expanding & augmenting them.</p>",
 				ref: [
 					{
 						name: "Looking for a reference? I still work @ Marketing Partners, that could get awkward!"
@@ -52,17 +52,17 @@ angular.module('harley.services', [])
 				work: [
 					{
 						title: "health.com.au Redesign",
-						desc: "MVP Currently in development. Click for a run through of the process.",
+						desc: "MVP Currently in development.",
 						img: 'new-health-mobile.png'
 					},
 					{
 						title: "Uncomplexicate Micro Site",
-						desc: "Working in an Agile environment, we are all about iterative deployment. So we set a road map from MVP to completed design.",
+						desc: "Driving an offline marketing campaign.",
 						img: 'uncomplexicate-mobile.png'
 					},
 					{
 						title: "health.com.au Website",
-						desc : "",
+						desc : "health.com.au's flagship website.",
 						img: 'health-mobile.png',
 					}
 
@@ -111,6 +111,7 @@ angular.module('harley.services', [])
 					{
 						title: "SitePoint Redesign",
 						link: 'http://sitepoint.com/',
+						desc: 'Merging seven verticals into one.',
 						img: 'sitepoint-mobile.png'
 					},
 					{
@@ -140,13 +141,13 @@ angular.module('harley.services', [])
 				work: [
 					{
 						title: "Lighting Partners Australia desktop & mobile site",
-						desc: "I worked closely with LPAust to bring their online presence into the 21st century, with a clean, modern and responsive website.",
+						desc: "I worked closely with LPAust to bring their catalogue online, with a clean, modern and responsive website.",
 						link: 'http://lpaust.com.au',
 						img: 'lpaust-mobile.png'
 					},
 					{
 						title: "Lahznimmo.com desktop & mobile site",
-						desc: "Lahznimmo Architects is a leading Australian Architecture firm based in Newtown, Sydney. I initially redesigned their website for them, working closely with the team",
+						desc: "Lahznimmo Architects is a leading Australian Architecture firm based in Newtown, Sydney. I redesigned & redeveloped their website for desktop & mobile, working closely with the team.",
 						url: 'http://lahznimmo.com',
 						img: 'lahznimmo-mobile.png'
 					},

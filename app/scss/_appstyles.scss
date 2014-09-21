@@ -411,7 +411,6 @@ nav.menu{
 	.ref{
 		clear: both;
 		background-color: #404040;
-		padding-bottom: 3em;
 			padding: 1em;
 			display: block;
 			text-transform: uppercase;
@@ -428,6 +427,7 @@ nav.menu{
 		padding-top: rem-calc(44px);
 		display: table-cell;
 		vertical-align: middle;
+		padding-bottom: 3em;
 
 
 
@@ -441,9 +441,8 @@ nav.menu{
 	}
 
 	.job-work{
-
-		margin-top: 3em;
-		padding-top: 3em;
+		padding-top: 2em;
+		padding-bottom: 2em;
 		background-color: #eee;
 
 		h2{
@@ -457,7 +456,7 @@ nav.menu{
 		}
 	}
 
-	@media #{$large-up}{
+	@media #{$medium-up}{
 		.job-work{
 		padding: 1em;
 
@@ -465,11 +464,11 @@ nav.menu{
 		overflow-y: scroll;
 
 		background-color: #f8f8f8;
-		padding-top: 5em;
 		position: relative;
 
 		h2{
-			font-family: "Playfair Display"
+			font-family: "Playfair Display";
+			margin-bottom: 1em;
 		}
 
 		.scroller{
@@ -478,10 +477,6 @@ nav.menu{
 
 		img{
 			max-width: 100%;
-
-			@media #{$large-up}{
-				//max-width: rem-calc(400px);
-			}
 		}
 
 		

@@ -6075,7 +6075,6 @@ nav.menu {
   .reveal-modal .ref, .reveal-modal dialog {
     clear: both;
     background-color: #404040;
-    padding-bottom: 3em;
     padding: 1em;
     display: block;
     text-transform: uppercase;
@@ -6087,12 +6086,13 @@ nav.menu {
   .reveal-modal .job-desc, .reveal-modal dialog {
     padding-top: 2.75rem;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    padding-bottom: 3em; }
     .reveal-modal .job-desc h2, .reveal-modal .job-desc dialog {
       font-family: "Playfair Display"; }
   .reveal-modal .job-work, .reveal-modal dialog {
-    margin-top: 3em;
-    padding-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     background-color: #eee; }
     .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
       font-family: "Playfair Display";
@@ -6100,21 +6100,20 @@ nav.menu {
     .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
       font-family: "Raleway";
       text-align: center; }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:40.063em) {
     .reveal-modal .job-work, .reveal-modal dialog {
       padding: 1em;
       width: 100%;
       overflow-y: scroll;
       background-color: #f8f8f8;
-      padding-top: 5em;
       position: relative; }
       .reveal-modal .job-work h2, .reveal-modal .job-work dialog {
-        font-family: "Playfair Display"; }
+        font-family: "Playfair Display";
+        margin-bottom: 1em; }
       .reveal-modal .job-work .scroller, .reveal-modal .job-work dialog {
         clear: both; }
       .reveal-modal .job-work img, .reveal-modal .job-work dialog {
         max-width: 100%; }
-        @media only screen and (min-width:64.063em) { }
       .reveal-modal .job-work h3, .reveal-modal .job-work dialog {
         font-family: "Raleway"; }
       .reveal-modal .job-work .next-title, .reveal-modal .job-work dialog {

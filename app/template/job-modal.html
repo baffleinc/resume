@@ -3,7 +3,7 @@
 	<a ng-click="$close()" class="close-button"><i class="fa fa-times fa-2x"></i></a>
 	<a ng-click="next()" class="control next-button"><i class="fa fa-arrow-right fa-2x"></i></a>
 </div>
-<div class="scroll">
+<div class="scroll" ng-keydown="keypressed()">
 	<div class="work-detail">
 		<div class="job-desc row">
 			<div class="small-12 columns">
@@ -14,8 +14,8 @@
 			</div>
 		</div>
 
-		<div class="job-work">
-			<div class="scroller" ng-show="job.work">
+		<div class="job-work" ng-show="job.work">
+			<div class="scroller">
 				<h2 class="small-12 columns next-title">Some of my work from here</h2>
 				<div ng-repeat="work in job.work"  class="work" horizontal-scroll>
 					<div class="info row small-12 columns">
@@ -23,6 +23,7 @@
 						<hr>
 					</div>
 					<img ng-show="work.img" ng-src="images/work/{{ work.img }}" alt="">
+					<div class="small-12 columns clearfix">{{ work.desc }}</div>
 			</div>
 			</div>
 		</div>

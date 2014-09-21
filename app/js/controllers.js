@@ -85,11 +85,10 @@ angular.module('harley.controllers', [])
 
 }])
 
-.controller('JobModalController', ['$scope', '$sce', 'Jobs', 'job', function($scope, $sce, Jobs, job){
+.controller('JobModalController', ['$scope', '$sce', '$document', 'Jobs', 'job', function($scope, $sce, $document, Jobs, job){
 	$scope.jobs = Jobs;
 	$scope.activeJob = job;
 	$scope.job = $scope.jobs[$scope.activeJob];
-	console.log($scope.job);
 
 	$scope.windowClass = 'job';
 	$scope.showControls = true;
@@ -100,20 +99,29 @@ angular.module('harley.controllers', [])
 
 	$scope.openWork = function(link){
 		if(link !== "") window.open(link,'_blank');
-	}
+	};
 
 	$scope.prev = function(){
 		$scope.activeJob--;
 		if($scope.activeJob < 0) $scope.activeJob = $scope.jobs.length-1;
 		$scope.job = $scope.jobs[$scope.activeJob];
-	}
+		return $scope.activeJob;
+	};
 
 	$scope.next = function(){
 		$scope.activeJob++;
 		if($scope.activeJob > $scope.jobs.length-1) $scope.activeJob = 0;
 		$scope.job = $scope.jobs[$scope.activeJob];
-	}
+	};
 
+	$document.bind('keydown', function(evt){
+		if(evt.keyCode === 39){
+			$scope.next();
+		} else if (evt.keyCode === 37){
+			$scope.prev();
+		}
+		$scope.$apply();
+	});
 
 }]);
 
