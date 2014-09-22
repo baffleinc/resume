@@ -6155,6 +6155,7 @@ div.preload {
   top: 0;
   bottom: 0;
   background: #fff url(../images/omg-rubic-preloader.gif) center center no-repeat;
+  background-size: 64px;
   z-index: 9999;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
 
