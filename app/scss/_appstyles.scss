@@ -527,12 +527,34 @@ div.preload{
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background-color: #fff;
+	background: #fff url(../images/omg-rubic-preloader.gif) center center no-repeat;
 	z-index: 9999;
+
+	transition: all 1s $easeOutExpo;
 }
 
-div.preload.loaded{
-	opacity: 0;
+body.loaded{
+	div.preload{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	section.profile{
+		.me{
+			h1{
+				transform: translateY(0);
+			}
+
+			img.logo{
+				transform: translateY(0) rotate(0);
+				opacity: 1;
+			}
+
+			p{
+				transform: translateY(0);
+			}
+		}
+	}
 }
 
 section.profile{
@@ -588,6 +610,9 @@ section.profile{
 			line-height: 1;
 			text-transform: uppercase;
 
+			transform: translateY(rem-calc(-44px));
+			transition: all 1s $easeOutExpo;
+
 			// transform: rotate(-10deg) skewX(-10deg);
 		}
 
@@ -596,6 +621,17 @@ section.profile{
 			color: #fff;
 			font-family: "Playfair Display";
 			font-weight: 400!important;
+		}
+
+		img.logo{
+			opacity: 0;
+			transform: translateY(rem-calc(-88px)) rotate(540deg);
+			transition: all 1s $easeOutExpo;
+		}
+
+		p{
+			transform: translateY(rem-calc(88px));
+			transition: all 1s $easeOutExpo;
 		}
 
 		@media #{$large-up}{

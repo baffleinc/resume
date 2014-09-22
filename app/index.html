@@ -19,9 +19,9 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body ng-controller="MainController">
+  <body ng-controller="MainController" ng-class="{ 'loaded': bgLoaded }">
 
-    <!-- <div class="preload" ng-class="{ 'loaded': bgLoaded }">loading...</div> -->
+    <div class="preload"></div>
 
     <!-- <nav-menu></nav-menu> -->
 
@@ -173,14 +173,16 @@
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
     <script src="bower_components/angular-parallax/scripts/angular-parallax.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
+    <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->

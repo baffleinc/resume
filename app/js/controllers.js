@@ -2,8 +2,8 @@
 
 angular.module('harley.controllers', [])
 
-.controller('MainController', ['$scope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education', 'Links',
-	function($scope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education, Links){
+.controller('MainController', ['$scope', '$rootScope', '$document', '$window', '$modal', '$swipe', 'Proof', 'Employment', 'Skills', 'Education', 'Links',
+	function($scope, $rootScope, $document, $window, $modal, $swipe, Proof, Employment, Skills, Education, Links){
 
 	// FILL SCOPE WITH MY AWESOMENESS //
 	$scope.points = Proof.points;
@@ -11,6 +11,11 @@ angular.module('harley.controllers', [])
 	$scope.skills = Skills.skills;
 	$scope.education = Education.education;
 	$scope.links = Links.links;
+
+	$rootScope.$watch('bgLoaded', function(oldv, newv){
+		// console.log(oldv, newv);
+		if(oldv === 'loaded') $scope.bgLoaded = true;
+	});
 
 	//
 	$scope.bgLoaded = false;

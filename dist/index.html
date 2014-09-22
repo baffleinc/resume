@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/app.min.css">
     <script src="js/vendor/modernizr.min.js"></script>
   </head>
-  <body ng-controller="MainController">
+  <body ng-controller="MainController" ng-class="{ 'loaded': bgLoaded }">
 
-    <!-- <div class="preload" ng-class="{ 'loaded': bgLoaded }">loading...</div> -->
+    <div class="preload"></div>
 
     <!-- <nav-menu></nav-menu> -->
 

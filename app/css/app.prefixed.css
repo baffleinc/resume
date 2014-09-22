@@ -6162,11 +6162,27 @@ div.preload {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
-  z-index: 9999; }
+  background: #fff url(../images/omg-rubic-preloader.gif) center center no-repeat;
+  z-index: 9999;
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
 
-div.preload.loaded {
-  opacity: 0; }
+body.loaded div.preload {
+  opacity: 0;
+  visibility: hidden; }
+body.loaded section.profile .me h1 {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
+body.loaded section.profile .me img.logo {
+  -webkit-transform: translateY(0) rotate(0);
+      -ms-transform: translateY(0) rotate(0);
+          transform: translateY(0) rotate(0);
+  opacity: 1; }
+body.loaded section.profile .me p {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
 
 section.profile {
   height: 105%;
@@ -6198,11 +6214,29 @@ section.profile {
       font-family: "Raleway";
       font-size: 3.125rem;
       line-height: 1;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-transform: translateY(-2.75rem);
+          -ms-transform: translateY(-2.75rem);
+              transform: translateY(-2.75rem);
+      -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+              transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
     section.profile .me h1, section.profile .me p, section.profile .me em {
       color: #fff;
       font-family: "Playfair Display";
       font-weight: 400 !important; }
+    section.profile .me img.logo {
+      opacity: 0;
+      -webkit-transform: translateY(-5.5rem) rotate(540deg);
+          -ms-transform: translateY(-5.5rem) rotate(540deg);
+              transform: translateY(-5.5rem) rotate(540deg);
+      -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+              transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+    section.profile .me p {
+      -webkit-transform: translateY(5.5rem);
+          -ms-transform: translateY(5.5rem);
+              transform: translateY(5.5rem);
+      -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+              transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
     @media only screen and (min-width:64.063em) {
       section.profile .me h1 {
         font-size: 7.5rem; }

@@ -43,7 +43,7 @@ angular.module('harley.directives', [])
         }
     };
 })
-.directive('preloadBackground', ['preload', function(preload) {
+.directive('preloadBackground', ['preload', '$rootScope', function(preload, $rootScope) {
     return {
       restrict: 'EA',
       scope: {
@@ -54,6 +54,8 @@ angular.module('harley.directives', [])
           element.css({
             "background-image": "url('" + attrs.url + "')"
           });
+
+          $rootScope.bgLoaded = 'loaded';
         });
       }
     };
