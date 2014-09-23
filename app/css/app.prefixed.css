@@ -6154,7 +6154,8 @@ nav.menu {
     position: absolute; }
 
 section {
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  width: 100%; }
 
 div.preload {
   position: fixed;
@@ -6191,7 +6192,6 @@ section.profile {
   margin-bottom: 0;
   position: relative;
   z-index: 98;
-  background: #3c84aa;
   background: url() no-repeat center center;
   background-size: cover;
   display: table; }
@@ -6259,7 +6259,7 @@ section.profile {
       text-align: center; }
 
 section.intro {
-  height: 115%;
+  height: 125%;
   display: table;
   background-color: #aee239;
   margin-bottom: 5em;
@@ -6337,10 +6337,11 @@ section.employment .job {
   -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
           transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative; }
-  section.employment .job:hover {
-    -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05); }
+  @media only screen and (min-width:64.063em) {
+    section.employment .job:hover {
+      -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+              transform: scale(1.05); } }
   section.employment .job .info-button {
     background: #00a8c6;
     color: #fff;

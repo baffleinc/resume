@@ -519,6 +519,7 @@ nav.menu{
 
 section{
 	margin-bottom: 4em;
+	width: 100%;
 }
 
 div.preload{
@@ -566,8 +567,6 @@ section.profile{
 
 	position: relative;
 	z-index: 98;
-
-	background: $blue;
 
 	background: url() no-repeat center center; 
   background-size: cover;
@@ -669,7 +668,7 @@ section.profile{
 }
  
 section.intro{
-	height: 115%;
+	height: 125%;
 	display: table;
 	background-color: $green;
 	margin-bottom: 5em;
@@ -776,8 +775,10 @@ section.employment{
 		transition: all .3s $easeOutExpo;
 		position: relative;
 
-		&:hover{
-			transform: scale(1.05);
+		@media #{$large-up}{
+			&:hover{
+				transform: scale(1.05);
+			}
 		}
 
 		.info-button{

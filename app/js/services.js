@@ -32,7 +32,7 @@ angular.module('harley.services', [])
 	return {
 		points: [
 			{
-				title: "UX Skills to go",
+				title: "UX Skills to Go",
 				desc: "Having worked on all sorts of projects, I have a solid understanding of user behaviour, as well as proven design patterns. \
 							I apply this to everything I design and build, combining it with killer marketing & conversion tactics. \
 							I also sketch & prototype all my interfaces, ensuring function comes before the design layer."
@@ -49,7 +49,7 @@ angular.module('harley.services', [])
 			},
 			{
 				title: "The Mind of a Marketer",
-				desc: "Having worked in a fast-paced marketing agency, everything I build has lead generation & conversion in mind. Landing pages, email campaigns, CRM integration, SEO, and so on. Marketing Partners, my current employer, lives & breathes digital marketing strategy for Australian Startups."
+				desc: "Having worked in a fast-paced marketing agency, everything I build has lead generation & conversion in mind. Landing pages, email campaigns, CRM integration, SEO, and so on. At Marketing Partners, we live & breathe digital marketing strategy for Australian startups."
 			},
 			{
 				title: "Communication Skills",
@@ -292,16 +292,16 @@ angular.module('harley.services', [])
 .factory('Skills', [function(){
 	return {
 		skills: [
-			{ name: "User Experience Design" },
-			{ name: "Information Architecture" },
-			{ name: "Design Thinking" },
+			{ name: "User experience design" },
+			{ name: "Information architecture" },
+			{ name: "Design thinking" },
 			{ name: "Working with brands" },
-			{ name: "Campaigns & Conversions" },
+			{ name: "Campaigns & conversions" },
 			{ name: "Prototype sketching & build" },
 			{ name: "Photoshop" },
 			{ name: "Illustrator" },
 			{ name: "Indesign" },
-			{ name: "Mobile Web" },
+			{ name: "Mobile web" },
 			{ name: "AngularJS" },
 			{ name: "jQuery" },
 			{ name: "Javascript / CoffeeScript" },
@@ -313,14 +313,15 @@ angular.module('harley.services', [])
 			{ name: "Haml" },
 			{ name: "Git" },
 			{ name: "Grunt" },
-			{ name: "Communication Skills" },
-			{ name: "Leadership Skills" },
+			{ name: "Agile & SCRUM" },
+			{ name: "Communication skills" },
+			{ name: "Leadership skills" },
 			{ name: "An innovative mind" },
 			{ name: "Creativity" },
 			{ name: "Attention to detail" },
 			{ name: "Client relations" },
 			{ name: "Cooking" },
-			{ name: "Coffee Making" }
+			{ name: "Coffee making" }
 		]
 	}
 }])
