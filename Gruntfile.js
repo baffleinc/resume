@@ -47,6 +47,15 @@ module.exports = function(grunt) {
 				src: ['<%= dist %>/*']
 			},
 		},
+		html2js: {
+			options: {
+				base: 'app'
+			},
+			main: {
+				src: ['<%= app %>/template/**/*.html'],
+				dest: '<%= app %>/js/templates.js'
+			} 
+		},
 		copy: {
 			dist: {
 				files: [{
@@ -105,6 +114,10 @@ module.exports = function(grunt) {
 			sass: {
 				files: '<%= app %>/scss/**/*.scss',
 				tasks: ['sass', 'autoprefixer']
+			},
+			html2js: {
+				files: ['<%= app %>/template/**/*.html'],
+				tasks: ['html2js']
 			},
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
